@@ -32,14 +32,14 @@ class SelectionWidget extends StatelessWidget {
               spreadRadius: 5,
             )
           ],
-          gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromRGBO(69, 90, 100, 1),
-              Color.fromRGBO(35, 41, 48, 1.0),
-            ],
-          ),
+          // gradient: const LinearGradient(
+          //   begin: Alignment.topCenter,
+          //   end: Alignment.bottomCenter,
+          //   colors: [
+          //     Color.fromRGBO(69, 90, 100, 1),
+          //     Color.fromRGBO(35, 41, 48, 1.0),
+          //   ],
+          // ),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
