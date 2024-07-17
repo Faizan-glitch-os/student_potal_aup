@@ -5,24 +5,20 @@ import 'package:lottie/lottie.dart';
 import 'package:student_potal_aup/main_screen.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen(
-      {super.key, required this.screenWidth, required this.screenHeight});
-
-  final double screenWidth;
-  final double screenHeight;
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return AnimatedSplashScreen(
+      backgroundColor: const Color.fromRGBO(0, 72, 128, 1),
       splash:
           Lottie.asset('assets/splashScreen/Animation - 1718877457625.json'),
-      nextScreen: MainScreen(
-        screenWidth: screenWidth,
-        screenHeight: screenHeight,
-      ),
-      duration: 5000,
+      nextScreen: MainScreen(),
+      duration: 3000,
       splashIconSize: screenWidth,
-      splashTransition: SplashTransition.sizeTransition,
+      splashTransition: SplashTransition.slideTransition,
     );
   }
 }

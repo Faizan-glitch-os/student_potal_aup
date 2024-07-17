@@ -3,7 +3,7 @@ import 'package:student_potal_aup/main_screen.dart';
 import 'package:student_potal_aup/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,18 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
-
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainScreen(
-        screenWidth: screenWidth,
-        screenHeight: screenHeight,
-      ),
+      home: MainScreen(),
     );
   }
 }

@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:student_potal_aup/data_model.dart';
 
 class MainScreen extends StatelessWidget {
-  MainScreen(
-      {super.key, required this.screenWidth, required this.screenHeight});
-
-  final double screenWidth;
-  final double screenHeight;
+  MainScreen({super.key});
 
   final notificationsData = [
     Notifications(
@@ -216,24 +212,28 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Student Portal'),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.favorite_border_rounded),
-          ),
-        ],
-      ),
       body: Container(
-        width: screenWidth,
-        height: screenHeight,
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, index) => Card(
-            child: Row(
-              children: [Text('date'), Text('title')],
-            ),
+        decoration: const BoxDecoration(
+          gradient: RadialGradient(
+            tileMode: TileMode.mirror,
+            colors: [
+              Color.fromRGBO(0, 72, 128, 1.0),
+              Color.fromRGBO(0, 39, 71, 1.0),
+            ],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(),
+                  )
+                ],
+              ),
+              Row()
+            ],
           ),
         ),
       ),
