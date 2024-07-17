@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 
+import 'package:lottie/lottie.dart';
+
 class SelectionWidget extends StatelessWidget {
-  const SelectionWidget({
-    super.key,
-    required this.deviceWidth,
-    required this.deviceHeight,
-    required this.text,
-  });
+  const SelectionWidget(
+      {super.key,
+      required this.deviceWidth,
+      required this.deviceHeight,
+      required this.text,
+      required this.image});
 
   final double deviceWidth;
   final double deviceHeight;
   final String text;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(10),
-      width: deviceWidth * .3,
+      width: deviceWidth * .4,
       height: deviceHeight * .2,
       decoration: BoxDecoration(
         boxShadow: const [
@@ -36,11 +39,19 @@ class SelectionWidget extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: Color.fromRGBO(255, 199, 39, 1),
-        ),
+      child: Column(
+        children: [
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: deviceWidth * .07,
+              color: Color.fromRGBO(255, 199, 39, 1),
+            ),
+          ),
+          Expanded(
+            child: Image.asset(image),
+          )
+        ],
       ),
     );
   }
