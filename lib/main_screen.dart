@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:student_potal_aup/data_model.dart';
+import 'package:student_potal_aup/deposit_slip_screen.dart';
+import 'package:student_potal_aup/notifications_screen.dart';
+import 'package:student_potal_aup/renewal_slip_screen.dart';
+import 'package:student_potal_aup/scholarship_screen.dart';
 import 'selection_widget.dart';
 
 class MainScreen extends StatelessWidget {
@@ -240,12 +244,24 @@ class MainScreen extends StatelessWidget {
                     deviceHeight: deviceHeight,
                     text: 'Notifications',
                     image: 'assets/images/notifications.gif',
+                    navigate: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (ctx) => NotificationsScreen()));
+                    },
                   ),
                   SelectionWidget(
                     deviceWidth: deviceWidth,
                     deviceHeight: deviceHeight,
                     text: 'Scholarships',
                     image: 'assets/images/scholarship.gif',
+                    navigate: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (ctx) => ScholarshipScreen()));
+                    },
                   ),
                 ],
               ),
@@ -257,12 +273,24 @@ class MainScreen extends StatelessWidget {
                     deviceHeight: deviceHeight,
                     text: 'Renewal Slip',
                     image: 'assets/images/slip.gif',
+                    navigate: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (ctx) => RenewalSlipScreen()));
+                    },
                   ),
                   SelectionWidget(
                     deviceWidth: deviceWidth,
                     deviceHeight: deviceHeight,
                     text: 'Deposit Slip',
                     image: 'assets/images/slip.gif',
+                    navigate: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (ctx) => DepositSlipScreen()));
+                    },
                   ),
                 ],
               ),
