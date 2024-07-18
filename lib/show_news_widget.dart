@@ -23,19 +23,20 @@ class ShowNewsWidget extends StatelessWidget {
             side:
                 BorderSide(color: Color.fromRGBO(255, 199, 39, 1), width: 1.5)),
         context: context,
-        builder: (ctx) => FractionallySizedBox(
-          heightFactor: .6,
+        builder: (ctx) => IntrinsicHeight(
           child: InteractiveViewer(
             minScale: 1,
             maxScale: 2,
-            child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                width: deviceWidth,
-                height: deviceHeight * .5,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Padding(
+                padding: const EdgeInsets.all(10),
                 child: Image.asset(
                   newsData[index].image,
-                  fit: BoxFit.contain,
-                )),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
         ),
       );
@@ -46,7 +47,7 @@ class ShowNewsWidget extends StatelessWidget {
       itemCount: newsData.length,
       itemBuilder: (context, index) => InkWell(
         splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(10),
         onTap: () {
           ShowImage(index);
         },
@@ -57,7 +58,7 @@ class ShowNewsWidget extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                     color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5)
                 // boxShadow: [
