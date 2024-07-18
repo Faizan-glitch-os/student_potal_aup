@@ -112,9 +112,33 @@ class NotificationsScreen extends StatelessWidget {
     final deviceWidth = MediaQuery.of(context).size.width;
     final deviceHeight = MediaQuery.of(context).size.height;
 
-    void ShowImage() {
+    void ShowImage(int index) {
       showModalBottomSheet(
-          context: context, builder: (ctx) => Text('show image'));
+        enableDrag: false,
+        barrierColor: Colors.black12.withOpacity(.6),
+        isScrollControlled: true,
+        backgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            side:
+                BorderSide(color: Color.fromRGBO(255, 199, 39, 1), width: 1.5)),
+        context: context,
+        builder: (ctx) => FractionallySizedBox(
+          heightFactor: .6,
+          child: InteractiveViewer(
+            minScale: 1,
+            maxScale: 2,
+            child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                width: deviceWidth,
+                height: deviceHeight * .5,
+                child: Image.asset(
+                  'assets/appImages/notifications/${index + 1}.png',
+                  fit: BoxFit.contain,
+                )),
+          ),
+        ),
+      );
     }
 
     return Scaffold(
@@ -124,7 +148,9 @@ class NotificationsScreen extends StatelessWidget {
           itemBuilder: (context, index) => InkWell(
             splashColor: Color.fromRGBO(35, 41, 48, 1.0),
             borderRadius: BorderRadius.circular(5),
-            onTap: ShowImage,
+            onTap: () {
+              ShowImage(index);
+            },
             child: Container(
               width: deviceWidth,
               height: deviceHeight * .2,
