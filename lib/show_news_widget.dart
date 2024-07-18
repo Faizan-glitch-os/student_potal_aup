@@ -50,70 +50,75 @@ class ShowNewsWidget extends StatelessWidget {
         onTap: () {
           ShowImage(index);
         },
-        child: Container(
-          width: deviceWidth,
-          height: deviceHeight * .2,
-          margin: const EdgeInsets.all(20),
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5),
-              border: Border.all(
-                  color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5)
-              // boxShadow: [
-              //   BoxShadow(
-              //     color: Colors.white38,
-              //     spreadRadius: 10,
-              //     blurRadius: 5,
-              //     offset: Offset(0, 4),
-              //   ),
-              // ],
-              // gradient: const LinearGradient(
-              //   begin: Alignment.topCenter,
-              //   end: Alignment.bottomCenter,
-              //   colors: [
-              //     Color.fromRGBO(69, 90, 100, 1),
-              //     Color.fromRGBO(35, 41, 48, 1.0),
-              //   ],
-              // ),
-              ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                    decoration: BoxDecoration(
+        child: IntrinsicHeight(
+          child: Container(
+            width: deviceWidth,
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(5),
+                border: Border.all(
+                    color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5)
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.white38,
+                //     spreadRadius: 10,
+                //     blurRadius: 5,
+                //     offset: Offset(0, 4),
+                //   ),
+                // ],
+                // gradient: const LinearGradient(
+                //   begin: Alignment.topCenter,
+                //   end: Alignment.bottomCenter,
+                //   colors: [
+                //     Color.fromRGBO(69, 90, 100, 1),
+                //     Color.fromRGBO(35, 41, 48, 1.0),
+                //   ],
+                // ),
+                ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(
+                          color: const Color.fromRGBO(255, 199, 39, 1),
+                          borderRadius: BorderRadius.circular(2)),
+                      child: Text(
+                        newsData[index].date,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: deviceWidth * .05,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const Spacer(),
+                    Container(
+                      decoration: const BoxDecoration(shape: BoxShape.circle),
+                      child: Icon(
+                        Icons.favorite_border,
+                        size: deviceWidth * 0.07,
                         color: const Color.fromRGBO(255, 199, 39, 1),
-                        borderRadius: BorderRadius.circular(2)),
-                    child: Text(
-                      newsData[index].date,
-                      style: TextStyle(
-                          color: Colors.white, fontSize: deviceWidth * .05),
-                    ),
-                  ),
-                  const Spacer(),
-                  Container(
-                    decoration: const BoxDecoration(shape: BoxShape.circle),
-                    child: Icon(
-                      Icons.favorite_border,
-                      size: deviceWidth * 0.07,
-                      color: const Color.fromRGBO(255, 199, 39, 1),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 10),
-              Expanded(
-                  child: Text(
-                newsData[index].title,
-                style: TextStyle(
-                    color: const Color.fromRGBO(35, 41, 48, 1.0),
-                    fontSize: deviceWidth * .06),
-              )),
-            ],
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 15),
+                Text(
+                  newsData[index].title,
+                  style: TextStyle(
+                      color: const Color.fromRGBO(35, 41, 48, 1.0),
+                      fontSize: deviceWidth * .06,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
           ),
         ),
       ),

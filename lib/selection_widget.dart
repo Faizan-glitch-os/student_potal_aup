@@ -49,10 +49,12 @@ class SelectionWidget extends StatelessWidget {
             Text(
               text,
               style: TextStyle(
-                fontSize: deviceWidth * .07,
-                color: Color.fromRGBO(255, 199, 39, 1),
-              ),
+                  fontSize: deviceWidth * .06,
+                  color: Color.fromRGBO(255, 199, 39, 1),
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 10),
             Expanded(
               child: Image.asset(image),
             )
