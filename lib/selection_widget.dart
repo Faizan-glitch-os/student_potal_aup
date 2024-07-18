@@ -18,7 +18,7 @@ class SelectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      splashColor: Color.fromRGBO(255, 199, 39, 1),
+      splashColor: const Color.fromRGBO(255, 199, 39, 1),
       onTap: navigate,
       child: Container(
         margin: const EdgeInsets.all(10),
@@ -26,7 +26,7 @@ class SelectionWidget extends StatelessWidget {
         height: deviceHeight * .2,
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(color: Color.fromRGBO(255, 199, 39, 1)),
+          border: Border.all(color: const Color.fromRGBO(255, 199, 39, 1)),
           // boxShadow: const [
           //   BoxShadow(
           //     color: Color.fromRGBO(35, 41, 48, 1.0),
@@ -50,11 +50,11 @@ class SelectionWidget extends StatelessWidget {
               text,
               style: TextStyle(
                   fontSize: deviceWidth * .06,
-                  color: Color.fromRGBO(255, 199, 39, 1),
+                  color: const Color.fromRGBO(255, 199, 39, 1),
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Expanded(
               child: Image.asset(image),
             )
