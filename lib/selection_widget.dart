@@ -25,13 +25,15 @@ class SelectionWidget extends StatelessWidget {
         width: deviceWidth * .4,
         height: deviceHeight * .2,
         decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromRGBO(35, 41, 48, 1.0),
-              blurRadius: 10,
-              spreadRadius: 5,
-            )
-          ],
+          color: Colors.white,
+          border: Border.all(color: Color.fromRGBO(255, 199, 39, 1)),
+          // boxShadow: const [
+          //   BoxShadow(
+          //     color: Color.fromRGBO(35, 41, 48, 1.0),
+          //     blurRadius: 10,
+          //     spreadRadius: 5,
+          //   )
+          // ],
           // gradient: const LinearGradient(
           //   begin: Alignment.topCenter,
           //   end: Alignment.bottomCenter,

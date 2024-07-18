@@ -112,67 +112,84 @@ class NotificationsScreen extends StatelessWidget {
     final deviceWidth = MediaQuery.of(context).size.width;
     final deviceHeight = MediaQuery.of(context).size.height;
 
+    void ShowImage() {
+      showModalBottomSheet(
+          context: context, builder: (ctx) => Text('show image'));
+    }
+
     return Scaffold(
       body: ScaffoldBackground(
         child: ListView.builder(
           itemCount: notificationsData.length,
-          itemBuilder: (context, index) => Container(
-            width: deviceWidth,
-            height: deviceHeight * .2,
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              boxShadow: [
-                BoxShadow(
-                    color: Color.fromRGBO(35, 41, 48, 1.0),
-                    spreadRadius: 10,
-                    blurRadius: 5)
-              ],
-              // gradient: const LinearGradient(
-              //   begin: Alignment.topCenter,
-              //   end: Alignment.bottomCenter,
-              //   colors: [
-              //     Color.fromRGBO(69, 90, 100, 1),
-              //     Color.fromRGBO(35, 41, 48, 1.0),
-              //   ],
-              // ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                      decoration: BoxDecoration(
+          itemBuilder: (context, index) => InkWell(
+            splashColor: Color.fromRGBO(35, 41, 48, 1.0),
+            borderRadius: BorderRadius.circular(5),
+            onTap: ShowImage,
+            child: Container(
+              width: deviceWidth,
+              height: deviceHeight * .2,
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(
+                      color: Color.fromRGBO(255, 199, 39, 1), width: 1.5)
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: Colors.white38,
+                  //     spreadRadius: 10,
+                  //     blurRadius: 5,
+                  //     offset: Offset(0, 4),
+                  //   ),
+                  // ],
+                  // gradient: const LinearGradient(
+                  //   begin: Alignment.topCenter,
+                  //   end: Alignment.bottomCenter,
+                  //   colors: [
+                  //     Color.fromRGBO(69, 90, 100, 1),
+                  //     Color.fromRGBO(35, 41, 48, 1.0),
+                  //   ],
+                  // ),
+                  ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(255, 199, 39, 1),
+                            borderRadius: BorderRadius.circular(2)),
+                        child: Text(
+                          notificationsData[index].date,
+                          style: TextStyle(
+                              color: Colors.white, fontSize: deviceWidth * .05),
+                        ),
+                      ),
+                      Spacer(),
+                      Container(
+                        decoration: BoxDecoration(shape: BoxShape.circle),
+                        child: Icon(
+                          Icons.favorite_border,
+                          size: deviceWidth * 0.07,
                           color: Color.fromRGBO(255, 199, 39, 1),
-                          borderRadius: BorderRadius.circular(2)),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Expanded(
                       child: Text(
-                        notificationsData[index].date,
-                        style: TextStyle(
-                            color: Colors.white, fontSize: deviceWidth * .05),
-                      ),
-                    ),
-                    Spacer(),
-                    Container(
-                      decoration: BoxDecoration(shape: BoxShape.circle),
-                      child: Icon(
-                        Icons.favorite_border,
-                        size: deviceWidth * 0.07,
-                        color: Color.fromRGBO(255, 199, 39, 1),
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(height: 10),
-                Expanded(
-                    child: Text(
-                  notificationsData[index].title,
-                  style: TextStyle(
-                      color: Colors.white24, fontSize: deviceWidth * .06),
-                )),
-              ],
+                    notificationsData[index].title,
+                    style: TextStyle(
+                        color: Color.fromRGBO(35, 41, 48, 1.0),
+                        fontSize: deviceWidth * .06),
+                  )),
+                ],
+              ),
             ),
           ),
         ),
