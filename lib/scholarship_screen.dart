@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'scaffold_background_widget.dart';
+import 'package:student_potal_aup/show_news_widget.dart';
 import 'data_model.dart';
 
 class ScholarshipScreen extends StatelessWidget {
@@ -112,113 +112,8 @@ class ScholarshipScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final deviceWidth = MediaQuery.of(context).size.width;
-    final deviceHeight = MediaQuery.of(context).size.height;
-
-    void ShowImage(int index) {
-      showModalBottomSheet(
-        enableDrag: false,
-        barrierColor: Colors.black12.withOpacity(.6),
-        isScrollControlled: true,
-        backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            side:
-                BorderSide(color: Color.fromRGBO(255, 199, 39, 1), width: 1.5)),
-        context: context,
-        builder: (ctx) => FractionallySizedBox(
-          heightFactor: .6,
-          child: InteractiveViewer(
-            minScale: 1,
-            maxScale: 2,
-            child: Image.asset(
-              'assets/appImages/scholarships/${index + 1}.png',
-              fit: BoxFit.contain,
-            ),
-          ),
-        ),
-      );
-    }
-
     return Scaffold(
-      body: ScaffoldBackground(
-        child: ListView.builder(
-          itemCount: scholarshipsData.length,
-          itemBuilder: (context, index) => InkWell(
-            splashColor: Color.fromRGBO(35, 41, 48, 1.0),
-            borderRadius: BorderRadius.circular(5),
-            onTap: () {
-              ShowImage(index);
-            },
-            child: Container(
-              width: deviceWidth,
-              height: deviceHeight * .2,
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(
-                      color: Color.fromRGBO(255, 199, 39, 1), width: 1.5)
-                  // boxShadow: [
-                  //   BoxShadow(
-                  //     color: Colors.white38,
-                  //     spreadRadius: 10,
-                  //     blurRadius: 5,
-                  //     offset: Offset(0, 4),
-                  //   ),
-                  // ],
-                  // gradient: const LinearGradient(
-                  //   begin: Alignment.topCenter,
-                  //   end: Alignment.bottomCenter,
-                  //   colors: [
-                  //     Color.fromRGBO(69, 90, 100, 1),
-                  //     Color.fromRGBO(35, 41, 48, 1.0),
-                  //   ],
-                  // ),
-                  ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(255, 199, 39, 1),
-                            borderRadius: BorderRadius.circular(2)),
-                        child: Text(
-                          scholarshipsData[index].date,
-                          style: TextStyle(
-                              color: Colors.white, fontSize: deviceWidth * .05),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        decoration: BoxDecoration(shape: BoxShape.circle),
-                        child: Icon(
-                          Icons.favorite_border,
-                          size: deviceWidth * 0.07,
-                          color: Color.fromRGBO(255, 199, 39, 1),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Expanded(
-                      child: Text(
-                    scholarshipsData[index].title,
-                    style: TextStyle(
-                        color: Color.fromRGBO(35, 41, 48, 1.0),
-                        fontSize: deviceWidth * .06),
-                  )),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      body: ShowNewsWidget(newsData: scholarshipsData),
     );
   }
 }

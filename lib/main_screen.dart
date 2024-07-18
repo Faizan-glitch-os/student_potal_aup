@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:student_potal_aup/data_model.dart';
 import 'package:student_potal_aup/deposit_slip_screen.dart';
 import 'package:student_potal_aup/notifications_screen.dart';
 import 'package:student_potal_aup/renewal_slip_screen.dart';
@@ -15,6 +14,26 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final deviceWidth = MediaQuery.of(context).size.width;
     final deviceHeight = MediaQuery.of(context).size.height;
+
+    void NavigateToScreen(Widget screen) {
+      Navigator.push(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (ctx, animation, secondAnimation) => screen,
+          transitionsBuilder: (ctx, animation, secondAnimation, child) {
+            const begin = Offset(1, 0);
+            const end = Offset.zero;
+            const curve = Curves.easeInOut;
+
+            var tween =
+                Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+            var offsetAnimation = animation.drive(tween);
+
+            return SlideTransition(position: offsetAnimation, child: child);
+          },
+        ),
+      );
+    }
 
     return Scaffold(
         body: ScaffoldBackground(
@@ -31,10 +50,7 @@ class MainScreen extends StatelessWidget {
                   text: 'Notifications',
                   image: 'assets/images/notifications.gif',
                   navigate: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (ctx) => NotificationsScreen()));
+                    NavigateToScreen(NotificationsScreen());
                   },
                 ),
                 SelectionWidget(
@@ -43,10 +59,7 @@ class MainScreen extends StatelessWidget {
                   text: 'Scholarships',
                   image: 'assets/images/scholarship.gif',
                   navigate: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (ctx) => ScholarshipScreen()));
+                    NavigateToScreen(ScholarshipScreen());
                   },
                 ),
               ],
@@ -60,10 +73,7 @@ class MainScreen extends StatelessWidget {
                   text: 'Renewal Slip',
                   image: 'assets/images/slip.gif',
                   navigate: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (ctx) => RenewalSlipScreen()));
+                    NavigateToScreen(RenewalSlipScreen());
                   },
                 ),
                 SelectionWidget(
@@ -72,10 +82,7 @@ class MainScreen extends StatelessWidget {
                   text: 'Deposit Slip',
                   image: 'assets/images/slip.gif',
                   navigate: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (ctx) => DepositSlipScreen()));
+                    NavigateToScreen(DepositSlipScreen());
                   },
                 ),
               ],
