@@ -10,7 +10,7 @@ class ShowNewsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceWidth = MediaQuery.of(context).size.width;
-    final deviceHeight = MediaQuery.of(context).size.height;
+    // final deviceHeight = MediaQuery.of(context).size.height;
 
     void ShowImage(int index) {
       showModalBottomSheet(
