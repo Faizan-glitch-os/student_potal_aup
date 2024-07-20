@@ -1,15 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class SelectOptionsWidget extends StatelessWidget {
-  const SelectOptionsWidget({super.key, required this.optionsList});
+class SelectProgramWidget extends StatelessWidget {
+  SelectProgramWidget(
+      {super.key,
+      required this.label,
+      required this.bachelorsList,
+      required this.mastersList,
+      required this.mscHonsList,
+      required this.mphilList,
+      required this.msList,
+      required this.phdList,
+      required this.diplomaList});
 
-  final List<String> optionsList;
+  final String label;
+
+  final List<String> bachelorsList;
+  final List<String> mastersList;
+  final List<String> mscHonsList;
+  final List<String> mphilList;
+  final List<String> msList;
+  final List<String> phdList;
+  final List<String> diplomaList;
 
   @override
   Widget build(BuildContext context) {
     return DropdownMenu(
-        label: const Text('Select Degree'),
+        label: Text(label),
         trailingIcon: const Icon(CupertinoIcons.chevron_down, size: 15),
         inputDecorationTheme: const InputDecorationTheme(
           labelStyle:
