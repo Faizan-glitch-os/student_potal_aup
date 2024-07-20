@@ -3,25 +3,10 @@ import 'package:flutter/cupertino.dart';
 
 class SelectProgramWidget extends StatelessWidget {
   SelectProgramWidget(
-      {super.key,
-      required this.label,
-      required this.bachelorsList,
-      required this.mastersList,
-      required this.mscHonsList,
-      required this.mphilList,
-      required this.msList,
-      required this.phdList,
-      required this.diplomaList});
+      {super.key, required this.label, required this.optionsList});
 
   final String label;
-
-  final List<String> bachelorsList;
-  final List<String> mastersList;
-  final List<String> mscHonsList;
-  final List<String> mphilList;
-  final List<String> msList;
-  final List<String> phdList;
-  final List<String> diplomaList;
+  final List<String> optionsList;
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +26,8 @@ class SelectProgramWidget extends StatelessWidget {
             side: WidgetStateProperty.all(
                 const BorderSide(color: Color.fromRGBO(255, 199, 39, 1)))),
         dropdownMenuEntries: [
-          ...optionsList.map((item) {
-            return DropdownMenuEntry(value: item, label: item);
-          })
+          ...optionsList
+              .map((item) => DropdownMenuEntry(value: item, label: item))
         ]);
   }
 }

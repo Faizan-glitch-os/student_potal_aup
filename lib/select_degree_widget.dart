@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 class SelectDegreeWidget extends StatelessWidget {
-  const SelectDegreeWidget({
-    super.key,
-    required this.optionsList,
-    required this.label,
-  });
+  const SelectDegreeWidget(
+      {super.key,
+      required this.optionsList,
+      required this.label,
+      required this.setSelectedProgramHandler});
 
   final List<String> optionsList;
   final String label;
+  final Function setSelectedProgramHandler;
 
   @override
   Widget build(BuildContext context) {
     return DropdownMenu(
+        onSelected: (v) {
+          setSelectedProgramHandler(v);
+          print(v);
+        },
         label: Text(label),
         trailingIcon: const Icon(CupertinoIcons.chevron_down, size: 15),
         inputDecorationTheme: const InputDecorationTheme(
@@ -29,9 +34,11 @@ class SelectDegreeWidget extends StatelessWidget {
             side: WidgetStateProperty.all(
                 const BorderSide(color: Color.fromRGBO(255, 199, 39, 1)))),
         dropdownMenuEntries: [
-          ...optionsList.map((item) {
-            return DropdownMenuEntry(value: item, label: item);
-          })
+          ...optionsList.map(
+            (item) {
+              return DropdownMenuEntry(value: item, label: item);
+            },
+          ),
         ]);
   }
 }
