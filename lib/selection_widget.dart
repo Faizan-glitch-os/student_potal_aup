@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class SelectionWidget extends StatelessWidget {
   const SelectionWidget(
       {super.key,
@@ -20,28 +22,31 @@ class SelectionWidget extends StatelessWidget {
     return InkWell(
       splashColor: const Color.fromRGBO(255, 199, 39, 1),
       onTap: navigate,
-      child: IntrinsicHeight(
-        child: Container(
-          margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(color: const Color.fromRGBO(255, 199, 39, 1)),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            children: [
-              Text(
-                text,
-                style: TextStyle(
-                    fontSize: deviceWidth * .06,
-                    color: const Color.fromRGBO(255, 199, 39, 1),
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 10),
-              Image.asset(image, height: deviceHeight * .15)
-            ],
-          ),
+      child: Container(
+        margin: EdgeInsets.all(10.r),
+        padding: EdgeInsets.all(10.r),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: const Color.fromRGBO(255, 199, 39, 1)),
+          borderRadius: BorderRadius.circular(10.r),
+        ),
+        child: Column(
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                  fontSize: 20.sp,
+                  color: const Color.fromRGBO(255, 199, 39, 1),
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10.h),
+            Image.asset(
+              image,
+              height: 100.h,
+              fit: BoxFit.contain,
+            ),
+          ],
         ),
       ),
     );

@@ -4,7 +4,7 @@ List<String> bachelorsList = [
   'Agriculture Chemistry',
   'Agriculture Economics',
   'Agriculture Mechanization',
-  'Agriculture Extension Education and Communication',
+  // 'Agriculture Extension Education and Communication',
   'Agronomy',
   'Animal Breeding & Genetics',
   'Animal Nutrition',
@@ -50,7 +50,7 @@ List<String> mastersList = [
 List<String> mscHonsList = [
   'Agricultural & Applied Economics',
   'Agriculture Chemistry & Biotechnology',
-  'Agriculture Extension Education and Communication',
+  // 'Agriculture Extension Education and Communication',
   'Agriculture Mechanization',
   'Agronomy',
   'Animal Breeding & Genetics',
@@ -113,7 +113,7 @@ List<String> phdList = [
   'Biotechnology and Genetic Engineering',
   'Clinical Veterinary Medicine & Surgery',
   'Doctor of Philosophy in Economics',
-  'Doctor of Philosophy in Agriculture Extension Education and Communication',
+  // 'Doctor of Philosophy in Agriculture Extension Education and Communication',
   'Doctor of Philosophy in Computer Science',
   'Doctor of Philosophy in Management Science',
   'Entomology',
@@ -138,5 +138,5 @@ List<String> phdList = [
 List<String> diplomaList = [
   'Diploma in Agriculture Sciences',
   'Diploma in Veterinary Sciences (DVS)',
-  'One Year Post Graduate Diploma in FOOD SAFETY AND CONTROL'
+  '1-Year Post Graduate Diploma in FOOD SAFETY AND CONTROL'
 ];

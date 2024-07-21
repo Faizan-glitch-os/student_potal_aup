@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:student_potal_aup/scaffold_background_widget.dart';
 
@@ -9,28 +10,25 @@ class ShowNewsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final deviceWidth = MediaQuery.of(context).size.width;
-    // final deviceHeight = MediaQuery.of(context).size.height;
-
     void ShowImage(int index) {
       showModalBottomSheet(
         enableDrag: false,
         barrierColor: Colors.black12.withOpacity(.6),
         isScrollControlled: true,
         backgroundColor: Colors.white,
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            side:
-                BorderSide(color: Color.fromRGBO(255, 199, 39, 1), width: 1.5)),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20.r)),
+            side: BorderSide(
+                color: Color.fromRGBO(255, 199, 39, 1), width: 1.5.r)),
         context: context,
         builder: (ctx) => IntrinsicHeight(
           child: InteractiveViewer(
             minScale: 1,
             maxScale: 2,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               child: Padding(
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.all(10.r),
                 child: Image.asset(
                   newsData[index].image,
                   fit: BoxFit.cover,
@@ -47,20 +45,20 @@ class ShowNewsWidget extends StatelessWidget {
       itemCount: newsData.length,
       itemBuilder: (context, index) => InkWell(
         splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         onTap: () {
           ShowImage(index);
         },
         child: IntrinsicHeight(
           child: Container(
-            width: deviceWidth,
-            margin: const EdgeInsets.all(20),
-            padding: const EdgeInsets.all(10),
+            width: ScreenUtil().screenWidth,
+            margin: EdgeInsets.all(20.r),
+            padding: EdgeInsets.all(10.r),
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
                 border: Border.all(
-                    color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5)
+                    color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5.w)
                 // boxShadow: [
                 //   BoxShadow(
                 //     color: Colors.white38,
@@ -84,16 +82,16 @@ class ShowNewsWidget extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 6, vertical: 2),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
                       decoration: BoxDecoration(
                           color: const Color.fromRGBO(255, 199, 39, 1),
-                          borderRadius: BorderRadius.circular(2)),
+                          borderRadius: BorderRadius.circular(2.r)),
                       child: Text(
                         newsData[index].date,
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: deviceWidth * .05,
+                            fontSize: 15.sp,
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold),
                       ),
@@ -103,18 +101,18 @@ class ShowNewsWidget extends StatelessWidget {
                       decoration: const BoxDecoration(shape: BoxShape.circle),
                       child: Icon(
                         Icons.favorite_border,
-                        size: deviceWidth * 0.07,
+                        size: 20.h,
                         color: const Color.fromRGBO(255, 199, 39, 1),
                       ),
                     )
                   ],
                 ),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 Text(
                   newsData[index].title,
                   style: TextStyle(
                       color: const Color.fromRGBO(35, 41, 48, 1.0),
-                      fontSize: deviceWidth * .06,
+                      fontSize: 20.sp,
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w500),
                 ),

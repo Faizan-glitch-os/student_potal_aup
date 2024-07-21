@@ -1,6 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:student_potal_aup/list_programs_arrays.dart';
 import 'package:student_potal_aup/select_program_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:student_potal_aup/submit_button_widget.dart';
+import 'package:student_potal_aup/text_field_widget.dart';
 
 import 'scaffold_background_widget.dart';
 import 'select_degree_widget.dart';
@@ -14,6 +18,29 @@ class RenewalSlipScreen extends StatefulWidget {
 
 class _RenewalSlipScreenState extends State<RenewalSlipScreen> {
   var selectedProgram = ['select the degree first'];
+  final List<String> degrees = [
+    'Bachelors',
+    'Masters',
+    'M.Sc (Hons)',
+    'M.Phil',
+    'MS',
+    'Ph.D',
+    'Diploma',
+  ];
+  final List<String> semesterNo = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12'
+  ];
 
   void SetSelectedProgram(String selectedDegree) {
     if (selectedDegree == 'Bachelors') {
@@ -21,23 +48,37 @@ class _RenewalSlipScreenState extends State<RenewalSlipScreen> {
         selectedProgram = bachelorsList;
       });
     } else if (selectedDegree == 'Masters') {
-      selectedProgram = mastersList;
+      setState(() {
+        selectedProgram = mastersList;
+      });
     } else if (selectedDegree == 'M.Sc (Hons)') {
-      selectedProgram = mscHonsList;
+      setState(() {
+        selectedProgram = mscHonsList;
+      });
     } else if (selectedDegree == 'M.Phil') {
-      selectedProgram = mphilList;
+      setState(() {
+        selectedProgram = mphilList;
+      });
     } else if (selectedDegree == 'MS') {
-      selectedProgram = msList;
+      setState(() {
+        selectedProgram = msList;
+      });
     } else if (selectedDegree == 'Ph.D') {
-      selectedProgram = phdList;
+      setState(() {
+        selectedProgram = phdList;
+      });
     } else if (selectedDegree == 'Diploma') {
-      selectedProgram = diplomaList;
+      setState(() {
+        selectedProgram = diplomaList;
+      });
     }
     print(selectedProgram);
   }
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController rollNumber = TextEditingController();
+
     return Scaffold(
       body: ScaffoldBackground(
         child: Center(
@@ -46,34 +87,33 @@ class _RenewalSlipScreenState extends State<RenewalSlipScreen> {
               children: [
                 SelectDegreeWidget(
                   setSelectedProgramHandler: SetSelectedProgram,
-                  label: 'Select Degree',
-                  optionsList: [
-                    'Bachelors',
-                    'Masters',
-                    'M.Sc (Hons)',
-                    'M.Phil',
-                    'MS',
-                    'Ph.D',
-                    'Diploma',
-                  ],
+                  label: 'Degree',
+                  optionsList: degrees,
+                  width: 200.w,
                 ),
+                SizedBox(height: 10.h),
                 SelectProgramWidget(
-                    optionsList: selectedProgram, label: 'Select Program'),
-                SelectProgramWidget(optionsList: [
-                  '1',
-                  '2',
-                  '3',
-                  '4',
-                  '5',
-                  '6',
-                  '7',
-                  '8',
-                  '9',
-                  '10',
-                  '11',
-                  '12'
-                ], label: 'Select Semester'),
-                TextField(),
+                  optionsList: selectedProgram,
+                  label: 'Program',
+                  width: 320.w,
+                ),
+                SizedBox(height: 10.h),
+                SelectProgramWidget(
+                  optionsList: semesterNo,
+                  label: 'Semester',
+                  width: 180.w,
+                ),
+                SizedBox(height: 10.h),
+                SizedBox(
+                  width: 100.w,
+                  child: TextFieldWidget(
+                    label: 'Roll No',
+                    textController: rollNumber,
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+                SizedBox(height: 50.h),
+                SubmitButtonWidget(),
               ],
             ),
           ),
