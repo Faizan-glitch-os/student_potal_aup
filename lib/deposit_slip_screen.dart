@@ -132,7 +132,7 @@ class _DepositSlipScreenState extends State<DepositSlipScreen> {
                       keyboardType: TextInputType.phone),
                 ),
                 SizedBox(height: 50.h),
-                SubmitButtonWidget()
+                const SubmitButtonWidget()
               ],
             ),
           ),
