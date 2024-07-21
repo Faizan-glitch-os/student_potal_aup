@@ -38,6 +38,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
       icon: Icon(
         Icons.favorite,
         color: iconColor,
+        size: 25.r,
       ),
     );
   }
