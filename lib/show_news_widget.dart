@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:student_potal_aup/scaffold_background_widget.dart';
 
+import 'favorite_button_widget.dart';
+
 class ShowNewsWidget extends StatelessWidget {
   const ShowNewsWidget({super.key, required this.newsData});
 
@@ -97,14 +99,7 @@ class ShowNewsWidget extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    Container(
-                      decoration: const BoxDecoration(shape: BoxShape.circle),
-                      child: Icon(
-                        Icons.favorite_border,
-                        size: 20.h,
-                        color: const Color.fromRGBO(255, 199, 39, 1),
-                      ),
-                    )
+                    FavoriteButton(),
                   ],
                 ),
                 SizedBox(height: 15.h),
