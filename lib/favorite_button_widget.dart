@@ -5,7 +5,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class FavoriteButton extends StatefulWidget {
   const FavoriteButton({
     super.key,
+    required this.date,
+    required this.title,
+    required this.image,
   });
+
+  final String date;
+  final String title;
+  final String image;
 
   @override
   State<FavoriteButton> createState() => _FavoriteButtonState();

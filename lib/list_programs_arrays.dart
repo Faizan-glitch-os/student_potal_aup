@@ -1,3 +1,5 @@
+List<String> favorites = [];
+
 List<String> degrees = [
   'Bachelors',
   'Masters',

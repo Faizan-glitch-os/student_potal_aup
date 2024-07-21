@@ -99,7 +99,10 @@ class ShowNewsWidget extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    FavoriteButton(),
+                    FavoriteButton(
+                        date: newsData[index].date,
+                        title: newsData[index].title,
+                        image: newsData[index].image),
                   ],
                 ),
                 SizedBox(height: 15.h),
