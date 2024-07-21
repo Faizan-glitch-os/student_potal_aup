@@ -23,7 +23,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
       });
     } else {
       setState(() {
-        iconColor = Color.fromRGBO(255, 199, 39, 1);
+        iconColor = const Color.fromRGBO(255, 199, 39, 1);
       });
     }
   }
@@ -31,7 +31,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      highlightColor: Color.fromRGBO(255, 199, 39, 0.3),
+      highlightColor: const Color.fromRGBO(255, 199, 39, 0.3),
       onPressed: () {
         AddToFavorite();
       },
