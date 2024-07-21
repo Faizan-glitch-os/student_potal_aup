@@ -1,3 +1,27 @@
+List<String> degrees = [
+  'Bachelors',
+  'Masters',
+  'M.Sc (Hons)',
+  'M.Phil',
+  'MS',
+  'Ph.D',
+  'Diploma',
+];
+List<String> semesterNo = [
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12'
+];
+
 List<String> bachelorsList = [
   'Agribusiness Management',
   'Agricultural & Applied Economics',

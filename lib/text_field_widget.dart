@@ -16,9 +16,9 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      textAlign: TextAlign.center,
       controller: textController,
       keyboardType: keyboardType,
-      maxLength: 10,
       decoration: InputDecoration(
         label: Text(
           label,

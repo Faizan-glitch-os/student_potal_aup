@@ -19,29 +19,6 @@ class RenewalSlipScreen extends StatefulWidget {
 
 class _RenewalSlipScreenState extends State<RenewalSlipScreen> {
   var selectedProgram = ['select the degree first'];
-  final List<String> degrees = [
-    'Bachelors',
-    'Masters',
-    'M.Sc (Hons)',
-    'M.Phil',
-    'MS',
-    'Ph.D',
-    'Diploma',
-  ];
-  final List<String> semesterNo = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12'
-  ];
 
   void SetSelectedProgram(String selectedDegree) {
     if (selectedDegree == 'Bachelors') {
