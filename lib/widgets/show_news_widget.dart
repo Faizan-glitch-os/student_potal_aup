@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:student_potal_aup/scaffold_background_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:student_potal_aup/colors.dart';
 
 import 'favorite_button_widget.dart';
 
@@ -42,8 +42,7 @@ class ShowNewsWidget extends StatelessWidget {
       );
     }
 
-    return ScaffoldBackground(
-        child: ListView.builder(
+    return ListView.builder(
       itemCount: newsData.length,
       itemBuilder: (context, index) => InkWell(
         splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
@@ -57,7 +56,7 @@ class ShowNewsWidget extends StatelessWidget {
             margin: EdgeInsets.all(20.r),
             padding: EdgeInsets.all(10.r),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: darkPurple,
                 borderRadius: BorderRadius.circular(10.r),
                 border: Border.all(
                     color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5.w)
@@ -109,16 +108,16 @@ class ShowNewsWidget extends StatelessWidget {
                 Text(
                   newsData[index].title,
                   style: TextStyle(
-                      color: const Color.fromRGBO(35, 41, 48, 1.0),
-                      fontSize: 20.sp,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w500),
+                    color: Colors.white,
+                    fontSize: 20.sp,
+                    fontFamily: 'Montserrat',
+                  ),
                 ),
               ],
             ),
           ),
         ),
       ),
-    ));
+    );
   }
 }

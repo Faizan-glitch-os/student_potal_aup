@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:student_potal_aup/colors.dart';
 
-import 'data_model.dart';
-import 'show_news_widget.dart';
+import '../data_model.dart';
+import '../widgets/show_news_widget.dart';
 
 class NotificationsScreen extends StatelessWidget {
   NotificationsScreen({super.key});
@@ -110,6 +111,7 @@ class NotificationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: halfWhite,
       body: ShowNewsWidget(
         newsData: notificationsData,
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:student_potal_aup/colors.dart';
 
 class FavoriteButton extends StatefulWidget {
   const FavoriteButton({
@@ -20,17 +21,17 @@ class FavoriteButton extends StatefulWidget {
 
 class _FavoriteButtonState extends State<FavoriteButton> {
   bool icon = true;
-  Color iconColor = Colors.black;
+  Color iconColor = Colors.white;
 
   void AddToFavorite() {
     icon = !icon;
     if (icon == true) {
       setState(() {
-        iconColor = Colors.black;
+        iconColor = Colors.white;
       });
     } else {
       setState(() {
-        iconColor = const Color.fromRGBO(255, 199, 39, 1);
+        iconColor = golden;
       });
     }
   }
@@ -38,7 +39,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      highlightColor: const Color.fromRGBO(255, 199, 39, 0.3),
+      highlightColor: golden.withOpacity(.6),
       onPressed: () {
         AddToFavorite();
       },

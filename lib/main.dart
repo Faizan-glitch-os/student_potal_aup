@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:student_potal_aup/screens/admin_screen.dart';
 
-import 'package:student_potal_aup/splash_screen.dart';
+import 'package:student_potal_aup/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
           ),
-          home: const SplashScreen(),
+          home: AdminScreen(),
         );
       },
     );

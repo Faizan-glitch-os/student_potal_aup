@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:student_potal_aup/colors.dart';
 
-import 'package:student_potal_aup/show_news_widget.dart';
-import 'data_model.dart';
+import '../data_model.dart';
+import '../widgets/show_news_widget.dart';
 
 class ScholarshipScreen extends StatelessWidget {
   ScholarshipScreen({super.key});
@@ -113,6 +114,7 @@ class ScholarshipScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: halfWhite,
       body: ShowNewsWidget(newsData: scholarshipsData),
     );
   }
