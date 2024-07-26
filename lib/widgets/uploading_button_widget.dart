@@ -8,9 +8,11 @@ class UploadingButtonWidget extends StatelessWidget {
   const UploadingButtonWidget({
     super.key,
     required this.label,
+    required this.navigateScreen,
   });
 
   final String label;
+  final Function() navigateScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class UploadingButtonWidget extends StatelessWidget {
             darkBlue,
           ),
           foregroundColor: WidgetStateProperty.all(halfWhite)),
-      onPressed: () {},
+      onPressed: navigateScreen,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         child: Text(
