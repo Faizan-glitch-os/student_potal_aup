@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:student_potal_aup/screens/results_screen.dart';
 
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
 import '../widgets/scaffold_background_widget.dart';
@@ -57,6 +58,17 @@ class MainScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              Row(
+                children: [
+                  SelectionWidget(
+                    text: 'Results',
+                    image: 'assets/images/results.gif',
+                    navigate: () {
+                      NavigateToScreen(ResultsScreen());
+                    },
+                  ),
+                ],
+              )
               // Row(
               //   mainAxisAlignment: MainAxisAlignment.center,
               //   children: [

@@ -13,3 +13,17 @@ class Scholarships {
   final String title;
   final String image;
 }
+
+class CourseOutline {
+  CourseOutline({
+    // required this.semester,
+    required this.code,
+    required this.subject,
+    required this.download,
+  });
+
+  // final String semester;
+  final String code;
+  final String subject;
+  final String download;
+}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:student_potal_aup/screens/admin_screen.dart';
+import 'package:student_potal_aup/screens/course_outline_screen.dart';
 
 import 'package:student_potal_aup/screens/splash_screen.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
           ),
-          home: AdminScreen(),
+          home: BscsScreen(),
         );
       },
     );
