@@ -630,3 +630,462 @@ Map itCourseOutline = {
         download: 'download'),
   ],
 };
+
+List<CourseOutline> it1 = [
+  CourseOutline(
+      // semester: '1',
+      code: 'MT-301',
+      subject: 'Calculus & Analytical Geometry',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'EG-301',
+      subject: 'English Composition & Comprehension',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'MG-301',
+      subject: 'Financial Accounting',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'IT-301',
+      subject: 'Introduction to Computing',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'IT-302',
+      subject: 'Programming Fundamentals',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'PK-301',
+      subject: 'Pakistan Studies',
+      download: 'download'),
+];
+List<CourseOutline> it2 = [
+  CourseOutline(
+      // semester: '2',
+      code: 'MT-311',
+      subject: 'Differential Equations',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'IT-312',
+      subject: 'Discrete Structures',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'IT-314',
+      subject: 'E-Commerce',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'IT-313',
+      subject: 'Introduction to IT',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'IT-311',
+      subject: 'Object Oriented Paradigm',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'EG-311',
+      subject: 'Technical & Business Writing',
+      download: 'download'),
+];
+List<CourseOutline> it3 = [
+  CourseOutline(
+      // semester: '3',
+      code: 'EG-401',
+      subject: 'Communication Skills',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'IT-401',
+      subject: 'Data Structures & Algorithms',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'IT-402',
+      subject: 'Information Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'MT-401',
+      subject: 'Multivariate Calculus',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'IT-403',
+      subject: 'Modern Programming Languages-I',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'MG-401',
+      subject: 'Principles of Management',
+      download: 'download'),
+];
+List<CourseOutline> it4 = [
+  CourseOutline(
+      // semester: '4',
+      code: 'IT-412',
+      subject: 'Database Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'IT-414',
+      subject: 'Digital Logic & Computer Architecture',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'MT-411',
+      subject: 'Linear Algebra',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'IT-413',
+      subject: 'Modern Programming Languages-II',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'IT-411',
+      subject: 'Operating Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'MG-411',
+      subject: 'Organizational Behavior',
+      download: 'download'),
+];
+List<CourseOutline> it5 = [
+  CourseOutline(
+      // semester: '5',
+      code: 'IT-503',
+      subject: 'Computer Communication & Networks',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'IT-504',
+      subject: 'Distributed Database Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'MG-501',
+      subject: 'Marketing',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'MT-501',
+      subject: 'Probability & Statistics',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'IT-501',
+      subject: 'Introduction to Software Development',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'CS-502',
+      subject: 'Visual Programming-I',
+      download: 'download'),
+];
+List<CourseOutline> it6 = [
+  CourseOutline(
+      // semester: '6',
+      code: 'IT-511',
+      subject: '	Artificial Intelligence',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'IT-512',
+      subject: 'Network Management & Security',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'IT-513',
+      subject: 'Software Engineering-II',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'IT-514',
+      subject: 'System Administration',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'IT-515',
+      subject: 'Visual Programming-II',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'CS-516',
+      subject: 'Web Engineering',
+      download: 'download'),
+];
+List<CourseOutline> it7 = [
+  CourseOutline(
+      // semester: '7',
+      code: 'IT-604',
+      subject: 'Human Computer Interaction',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'IT-603',
+      subject: 'Technology Management',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'IT-601',
+      subject: 'Telecommunication Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'IT-602',
+      subject: 'Wireless Networks',
+      download: 'download'),
+];
+List<CourseOutline> it8 = [
+  CourseOutline(
+      // semester: '8',
+      code: 'IT-612',
+      subject: 'Professional Practices',
+      download: 'download'),
+  CourseOutline(
+      // semester: '8',
+      code: 'SS-611',
+      subject: 'Professional Practices',
+      download: 'download'),
+];
+
+List<CourseOutline> bs1 = [
+  CourseOutline(
+      // semester: '1',
+      code: 'MT-301',
+      subject: 'Calculus & Analytical Geometry',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'EG-301',
+      subject: 'English Composition & Comprehension',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'MG-301',
+      subject: 'Financial Accounting',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'CS-301',
+      subject: 'Introduction to Computing',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'CS-302',
+      subject: 'Programming Fundamentals',
+      download: 'download'),
+  CourseOutline(
+      // semester: '1',
+      code: 'PK-301',
+      subject: 'Pakistan Studies',
+      download: 'download'),
+];
+List<CourseOutline> bs2 = [
+  CourseOutline(
+      // semester: '2',
+      code: 'MT-311',
+      subject: 'Differential Equations',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'CS-313',
+      subject: 'Digital Logic & Computer Architecture',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'CS-312',
+      subject: 'Discrete Structures',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'SS-311',
+      subject: 'Economics',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'CS-311',
+      subject: 'Object Oriented Paradigm',
+      download: 'download'),
+  CourseOutline(
+      // semester: '2',
+      code: 'EG-311',
+      subject: 'Technical & Business Writing',
+      download: 'download'),
+];
+List<CourseOutline> bs3 = [
+  CourseOutline(
+      // semester: '3',
+      code: 'EG-401',
+      subject: 'Communication Skills',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'CS-401',
+      subject: 'Data Structures & Algorithms',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'CS-402',
+      subject: 'DatabaseSystems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'MT-401',
+      subject: 'Multivari ate Calculus',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'CS-403',
+      subject: 'Operating Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '3',
+      code: 'PH-401',
+      subject: 'Physics ( Electromagnetism )',
+      download: 'download'),
+];
+List<CourseOutline> bs4 = [
+  CourseOutline(
+      // semester: '4',
+      code: 'CS-411',
+      subject: 'Computer Architecture',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'MG-411',
+      subject: 'Financial Management',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'CS-412',
+      subject: 'Introduction to Software Development',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'MT-411',
+      subject: 'Linear Algebra',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'CS-413',
+      subject: 'Modern Programming Languages-I',
+      download: 'download'),
+  CourseOutline(
+      // semester: '4',
+      code: 'PH-411',
+      subject: 'Physics-II',
+      download: 'download'),
+];
+List<CourseOutline> bs5 = [
+  CourseOutline(
+      // semester: '5',
+      code: 'CS-501',
+      subject: 'Computer Organization & Assembly Language',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'CS-504',
+      subject: 'Modern Programming Languages-II',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'MT-501',
+      subject: 'Probability & Statistics',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'CS-502',
+      subject: 'Software Engineering-II',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'CS-503',
+      subject: 'Theory of Automata and Formal Languages',
+      download: 'download'),
+  CourseOutline(
+      // semester: '5',
+      code: 'CS-505',
+      subject: 'Web Engineering',
+      download: 'download'),
+];
+List<CourseOutline> bs6 = [
+  CourseOutline(
+      // semester: '6',
+      code: 'CS-512',
+      subject: 'Analysis of Algorithms',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'CS-514',
+      subject: 'Computer Graphics',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'CS-511',
+      subject: 'Computer Communications and Networks',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'PS-511',
+      subject: 'Psychology',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'CS-513',
+      subject: 'System Programming',
+      download: 'download'),
+  CourseOutline(
+      // semester: '6',
+      code: 'CS-515',
+      subject: 'Visual Programming - I',
+      download: 'download'),
+];
+List<CourseOutline> bs7 = [
+  CourseOutline(
+      // semester: '7',
+      code: 'CS-601',
+      subject: 'Artificial Intelligence',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'CS-602',
+      subject: 'Compiler Construction',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'CS-605',
+      subject: 'Data & Network Security',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'PS-604',
+      subject: 'Distributed Database Systems',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'CS-606',
+      subject: 'Numerical Computing',
+      download: 'download'),
+  CourseOutline(
+      // semester: '7',
+      code: 'CS-603',
+      subject: 'Visual Programming - II',
+      download: 'download'),
+];
+List<CourseOutline> bs8 = [
+  CourseOutline(
+      // semester: '8',
+      code: 'SS-611',
+      subject: 'Professional Practices',
+      download: 'download')
+];
