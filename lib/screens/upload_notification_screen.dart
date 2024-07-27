@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,7 +29,7 @@ class UploadNotificationScreen extends StatelessWidget {
                   'Uploading Notification',
                   style: TextStyle(fontSize: 40.sp, color: golden),
                 ),
-                SizedBox(height: 50.h),
+                SizedBox(height: 30.h),
                 TextFieldWidget(
                     textController: dateController,
                     label: 'Date',
@@ -41,8 +43,8 @@ class UploadNotificationScreen extends StatelessWidget {
                     obscureText: false),
                 SizedBox(height: 10.h),
                 Container(
-                  height: 200.h,
-                  width: double.infinity,
+                  height: 300.h,
+                  width: ScreenUtil().screenWidth,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.r),
                     border: Border.all(width: 1, color: golden),
@@ -62,6 +64,15 @@ class UploadNotificationScreen extends StatelessWidget {
                       style: TextStyle(color: darkPurple, fontSize: 20.sp),
                     ),
                   ),
+                ),
+                SizedBox(height: 10.h),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(darkPurple),
+                    foregroundColor: WidgetStateProperty.all(halfWhite),
+                  ),
+                  child: Text('Upload'),
                 ),
               ],
             ),
