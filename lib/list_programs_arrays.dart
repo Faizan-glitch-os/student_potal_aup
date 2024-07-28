@@ -435,7 +435,7 @@ Map itCourseOutline = {
         subject: 'Pakistan Studies',
         download: 'download'),
   ],
-  'it12': [
+  'it2': [
     CourseOutline(
         // semester: '2',
         code: 'MT-311',
