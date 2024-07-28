@@ -6,6 +6,7 @@ import 'package:student_potal_aup/screens/results_screen.dart';
 
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
 import 'package:student_potal_aup/screens/uploading_options_pop_over.dart';
+import 'package:student_potal_aup/widgets/outline_widget.dart';
 import '../widgets/scaffold_background_widget.dart';
 import 'package:student_potal_aup/colors.dart';
 import '../widgets/selection_widget.dart';
@@ -37,97 +38,69 @@ class MainScreen extends StatelessWidget {
     }
 
     return Scaffold(
-        backgroundColor: halfWhite,
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SelectionWidget(
-                    text: 'Notifications',
-                    image: 'assets/images/notifications.gif',
-                    navigate: () {
-                      NavigateToScreen(NotificationsScreen());
-                    },
-                  ),
-                  SelectionWidget(
-                    text: 'Scholarships',
-                    image: 'assets/images/scholarship.gif',
-                    navigate: () {
-                      NavigateToScreen(ScholarshipScreen());
-                    },
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SelectionWidget(
-                    text: '     Results     ',
-                    image: 'assets/images/results.gif',
-                    navigate: () {
-                      NavigateToScreen(ResultsScreen());
-                    },
-                  ),
-                  SelectionWidget(
-                      text: '    Outlines    ',
-                      image: 'assets/images/course.gif',
-                      navigate: () {
-                        showPopover(
-                            barrierColor: Colors.black.withOpacity(.5),
-                            backgroundColor: darkPurple,
-                            height: 200.h,
-                            context: context,
-                            bodyBuilder: (context) =>
-                                UploadingOptionsPopOver());
-                        // showPopover(
-                        //     backgroundColor: darkPurple,
-                        //     height: 300.h,
-                        //     context: context,
-                        //     bodyBuilder: (context) {
-                        //       return Row(
-                        //         children: [
-                        //           ElevatedButton(
-                        //             onPressed: () {},
-                        //             child: Text('CS Course Outline'),
-                        //           ),
-                        //           ElevatedButton(
-                        //             onPressed: () {},
-                        //             child: Text('IT Course Outline'),
-                        //           ),
-                        //         ],
-                        //       );
-                        //     });
-                      })
-                ],
-              )
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     SelectionWidget(
-              //       deviceWidth: deviceWidth,
-              //       deviceHeight: deviceHeight,
-              //       text: 'Renewal Slip',
-              //       image: 'assets/images/slip.gif',
-              //       navigate: () {
-              //         NavigateToScreen(RenewalSlipScreen());
-              //       },
-              //     ),
-              //     SelectionWidget(
-              //       deviceWidth: deviceWidth,
-              //       deviceHeight: deviceHeight,
-              //       text: 'Deposit Slip',
-              //       image: 'assets/images/slip.gif',
-              //       navigate: () {
-              //         NavigateToScreen(DepositSlipScreen());
-              //       },
-              //     ),
-              //   ],
-              // ),
-            ],
-          ),
-        ));
+      backgroundColor: halfWhite,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SelectionWidget(
+                  text: 'Notifications',
+                  image: 'assets/images/notifications.gif',
+                  navigate: () {
+                    NavigateToScreen(NotificationsScreen());
+                  },
+                ),
+                SelectionWidget(
+                  text: 'Scholarships',
+                  image: 'assets/images/scholarship.gif',
+                  navigate: () {
+                    NavigateToScreen(ScholarshipScreen());
+                  },
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SelectionWidget(
+                  text: '     Results     ',
+                  image: 'assets/images/results.gif',
+                  navigate: () {
+                    NavigateToScreen(ResultsScreen());
+                  },
+                ),
+                OutlineWidget(),
+              ],
+            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     SelectionWidget(
+            //       deviceWidth: deviceWidth,
+            //       deviceHeight: deviceHeight,
+            //       text: 'Renewal Slip',
+            //       image: 'assets/images/slip.gif',
+            //       navigate: () {
+            //         NavigateToScreen(RenewalSlipScreen());
+            //       },
+            //     ),
+            //     SelectionWidget(
+            //       deviceWidth: deviceWidth,
+            //       deviceHeight: deviceHeight,
+            //       text: 'Deposit Slip',
+            //       image: 'assets/images/slip.gif',
+            //       navigate: () {
+            //         NavigateToScreen(DepositSlipScreen());
+            //       },
+            //     ),
+            //   ],
+            // ),
+          ],
+        ),
+      ),
+    );
   }
 }

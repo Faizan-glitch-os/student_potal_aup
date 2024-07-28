@@ -37,11 +37,11 @@ class AllSubjects extends StatelessWidget {
                     children: [
                       Text(
                         '${item.code}',
-                        style: TextStyle(color: halfWhite, fontSize: 10.sp),
+                        style: TextStyle(color: halfWhite, fontSize: 12.sp),
                       ),
                       Text(
                         '${item.subject}',
-                        style: TextStyle(color: halfWhite, fontSize: 10.sp),
+                        style: TextStyle(color: halfWhite, fontSize: 12.sp),
                       ),
                       InkWell(
                         onTap: () {

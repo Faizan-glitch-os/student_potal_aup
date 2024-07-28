@@ -40,18 +40,21 @@ class UploadingOptionsPopOver extends StatelessWidget {
           ),
           Spacer(),
           UploadingButtonWidget(
+              horizontalPadding: 20,
               label: 'Latest Notification',
               navigateScreen: () {
                 NavigateToScreen(UploadNotificationScreen());
               }),
           SizedBox(height: 5.h),
           UploadingButtonWidget(
+              horizontalPadding: 20,
               label: 'Scholarship',
               navigateScreen: () {
                 NavigateToScreen(UploadScholarshipScreen());
               }),
           SizedBox(height: 5.h),
           UploadingButtonWidget(
+            horizontalPadding: 20,
             label: 'Result',
             navigateScreen: () {
               NavigateToScreen(UploadResultScreen());

@@ -5,14 +5,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:student_potal_aup/colors.dart';
 
 class UploadingButtonWidget extends StatelessWidget {
-  const UploadingButtonWidget({
-    super.key,
-    required this.label,
-    required this.navigateScreen,
-  });
+  const UploadingButtonWidget(
+      {super.key,
+      required this.label,
+      required this.navigateScreen,
+      required this.horizontalPadding});
 
   final String label;
   final Function() navigateScreen;
+  final double horizontalPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,8 @@ class UploadingButtonWidget extends StatelessWidget {
           foregroundColor: WidgetStateProperty.all(halfWhite)),
       onPressed: navigateScreen,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+        padding: EdgeInsets.symmetric(
+            horizontal: horizontalPadding.w, vertical: 10.h),
         child: Text(
           label,
           style: TextStyle(fontSize: 15.sp),

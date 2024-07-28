@@ -42,7 +42,7 @@ class SelectionWidget extends StatelessWidget {
             SizedBox(height: 10.h),
             Image.asset(
               image,
-              height: 130.h,
+              height: 100.h,
               width: 100.w,
               fit: BoxFit.contain,
             ),
