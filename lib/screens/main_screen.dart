@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:popover/popover.dart';
+import 'package:student_potal_aup/screens/admin_screen.dart';
 import 'package:student_potal_aup/screens/results_screen.dart';
 
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
@@ -43,6 +44,17 @@ class MainScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            IconButton(
+              highlightColor: golden.withOpacity(.2),
+              onPressed: () {
+                NavigateToScreen(AdminScreen());
+              },
+              icon: Icon(
+                Icons.admin_panel_settings,
+                size: 80.r,
+                color: darkGrey,
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
