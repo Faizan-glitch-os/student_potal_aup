@@ -15,8 +15,8 @@ class AdminScreen extends StatefulWidget {
 }
 
 class _AdminScreenState extends State<AdminScreen> {
-  final TextEditingController adminNameController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  TextEditingController adminNameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:student_potal_aup/colors.dart';
 
-class TextFieldWidget extends StatelessWidget {
-  const TextFieldWidget({
+class TextFieldWidget extends StatefulWidget {
+  TextFieldWidget({
     super.key,
     required this.textController,
     required this.label,
@@ -18,17 +18,22 @@ class TextFieldWidget extends StatelessWidget {
   final bool obscureText;
 
   @override
+  State<TextFieldWidget> createState() => _TextFieldWidgetState();
+}
+
+class _TextFieldWidgetState extends State<TextFieldWidget> {
+  @override
   Widget build(BuildContext context) {
     return TextField(
       style: TextStyle(fontFamily: 'Montserrat', color: halfWhite),
       cursorColor: golden,
-      obscureText: obscureText,
+      obscureText: widget.obscureText,
       textAlign: TextAlign.center,
-      controller: textController,
-      keyboardType: keyboardType,
+      controller: widget.textController,
+      keyboardType: widget.keyboardType,
       decoration: InputDecoration(
         label: Text(
-          label,
+          widget.label,
           style: TextStyle(color: golden, fontSize: 20.sp),
         ),
         filled: true,

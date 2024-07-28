@@ -8,9 +8,14 @@ import 'package:image_picker/image_picker.dart';
 import 'package:student_potal_aup/colors.dart';
 import 'package:student_potal_aup/widgets/text_field_widget.dart';
 
-class UploadResultScreen extends StatelessWidget {
+class UploadResultScreen extends StatefulWidget {
   const UploadResultScreen({super.key});
 
+  @override
+  State<UploadResultScreen> createState() => _UploadResultScreenState();
+}
+
+class _UploadResultScreenState extends State<UploadResultScreen> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController dateController = TextEditingController();

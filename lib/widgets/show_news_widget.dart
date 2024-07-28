@@ -53,8 +53,8 @@ class ShowNewsWidget extends StatelessWidget {
         child: IntrinsicHeight(
           child: Container(
             width: ScreenUtil().screenWidth,
-            margin: EdgeInsets.all(20.r),
-            padding: EdgeInsets.all(10.r),
+            margin: EdgeInsets.all(10.r),
+            padding: EdgeInsets.all(20.r),
             decoration: BoxDecoration(
                 color: darkPurple,
                 borderRadius: BorderRadius.circular(10.r),
@@ -80,31 +80,26 @@ class ShowNewsWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(255, 199, 39, 1),
-                          borderRadius: BorderRadius.circular(2.r)),
-                      child: Text(
-                        newsData[index].date,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.sp,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    const Spacer(),
-                    FavoriteButton(
-                        date: newsData[index].date,
-                        title: newsData[index].title,
-                        image: newsData[index].image),
-                  ],
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
+                  decoration: BoxDecoration(
+                      color: const Color.fromRGBO(255, 199, 39, 1),
+                      borderRadius: BorderRadius.circular(2.r)),
+                  child: Text(
+                    newsData[index].date,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15.sp,
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
-                SizedBox(height: 15.h),
+                // const Spacer(),
+                // FavoriteButton(
+                //     date: newsData[index].date,
+                //     title: newsData[index].title,
+                //     image: newsData[index].image),
+                SizedBox(height: 20.h),
                 Text(
                   newsData[index].title,
                   style: TextStyle(
