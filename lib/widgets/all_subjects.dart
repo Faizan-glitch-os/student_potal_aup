@@ -27,7 +27,11 @@ class AllSubjects extends StatelessWidget {
           children: [
             Text(
               semester,
-              style: TextStyle(color: halfWhite, fontSize: 20.sp),
+              style: TextStyle(
+                color: halfWhite,
+                fontSize: 20.sp,
+                fontFamily: 'Montserrat',
+              ),
             ),
             SizedBox(height: 20.h),
             ...subjects.map((item) => Padding(
@@ -37,11 +41,19 @@ class AllSubjects extends StatelessWidget {
                     children: [
                       Text(
                         '${item.code}',
-                        style: TextStyle(color: halfWhite, fontSize: 12.sp),
+                        style: TextStyle(
+                          color: halfWhite,
+                          fontSize: 12.sp,
+                          fontFamily: 'Montserrat',
+                        ),
                       ),
                       Text(
                         '${item.subject}',
-                        style: TextStyle(color: halfWhite, fontSize: 12.sp),
+                        style: TextStyle(
+                          color: halfWhite,
+                          fontSize: 12.sp,
+                          fontFamily: 'Montserrat',
+                        ),
                       ),
                       InkWell(
                         onTap: () {
@@ -51,7 +63,10 @@ class AllSubjects extends StatelessWidget {
                         child: Text(
                           'Download',
                           style: TextStyle(
-                              color: Colors.greenAccent, fontSize: 10.sp),
+                            color: Colors.greenAccent,
+                            fontSize: 10.sp,
+                            fontFamily: 'Montserrat',
+                          ),
                         ),
                       )
                     ],

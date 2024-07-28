@@ -34,7 +34,10 @@ class UploadingButtonWidget extends StatelessWidget {
             horizontal: horizontalPadding.w, vertical: 10.h),
         child: Text(
           label,
-          style: TextStyle(fontSize: 15.sp),
+          style: TextStyle(
+            fontSize: 15.sp,
+            fontFamily: 'Montserrat',
+          ),
         ),
       ),
     );

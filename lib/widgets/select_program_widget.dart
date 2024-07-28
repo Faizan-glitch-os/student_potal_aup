@@ -19,14 +19,19 @@ class SelectProgramWidget extends StatelessWidget {
         width: width,
         label: Text(
           label,
-          style: TextStyle(fontSize: 22.sp),
+          style: TextStyle(
+            fontSize: 22.sp,
+            fontFamily: 'Montserrat',
+          ),
         ),
         trailingIcon: Icon(CupertinoIcons.chevron_down, size: 15.h),
         inputDecorationTheme: InputDecorationTheme(
           labelStyle: TextStyle(
-              color: Color.fromRGBO(255, 199, 39, 1),
-              fontSize: 22.sp,
-              fontWeight: FontWeight.bold),
+            color: Color.fromRGBO(255, 199, 39, 1),
+            fontSize: 22.sp,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat',
+          ),
           filled: true,
           fillColor: Colors.white,
           enabledBorder: OutlineInputBorder(

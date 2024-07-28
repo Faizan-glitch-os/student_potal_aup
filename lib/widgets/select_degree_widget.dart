@@ -29,9 +29,11 @@ class SelectDegreeWidget extends StatelessWidget {
         trailingIcon: Icon(CupertinoIcons.chevron_down, size: 15.h),
         inputDecorationTheme: InputDecorationTheme(
           labelStyle: TextStyle(
-              color: Color.fromRGBO(255, 199, 39, 1),
-              fontSize: 22.sp,
-              fontWeight: FontWeight.bold),
+            color: Color.fromRGBO(255, 199, 39, 1),
+            fontSize: 22.sp,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat',
+          ),
           filled: true,
           fillColor: Colors.white,
           enabledBorder: OutlineInputBorder(

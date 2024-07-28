@@ -36,7 +36,11 @@ class UploadingOptionsPopOver extends StatelessWidget {
         children: [
           Text(
             'Access Granted',
-            style: TextStyle(color: Colors.greenAccent, fontSize: 20.sp),
+            style: TextStyle(
+              color: Colors.greenAccent,
+              fontSize: 20.sp,
+              fontFamily: 'Montserrat',
+            ),
           ),
           Spacer(),
           UploadingButtonWidget(

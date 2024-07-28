@@ -27,7 +27,11 @@ class UploadNotificationScreen extends StatelessWidget {
                 Text(
                   textAlign: TextAlign.center,
                   'Uploading Notification',
-                  style: TextStyle(fontSize: 40.sp, color: golden),
+                  style: TextStyle(
+                    fontSize: 40.sp,
+                    color: golden,
+                    fontFamily: 'Montserrat',
+                  ),
                 ),
                 SizedBox(height: 30.h),
                 TextFieldWidget(
@@ -61,7 +65,11 @@ class UploadNotificationScreen extends StatelessWidget {
                     ),
                     label: Text(
                       'Tap to Upload',
-                      style: TextStyle(color: darkPurple, fontSize: 20.sp),
+                      style: TextStyle(
+                        color: darkPurple,
+                        fontSize: 20.sp,
+                        fontFamily: 'Montserrat',
+                      ),
                     ),
                   ),
                 ),
@@ -72,7 +80,13 @@ class UploadNotificationScreen extends StatelessWidget {
                     backgroundColor: WidgetStateProperty.all(darkPurple),
                     foregroundColor: WidgetStateProperty.all(halfWhite),
                   ),
-                  child: Text('Upload'),
+                  child: Text(
+                    'Upload',
+                    style: TextStyle(
+                      fontSize: 15.sp,
+                      fontFamily: 'Montserrat',
+                    ),
+                  ),
                 ),
               ],
             ),

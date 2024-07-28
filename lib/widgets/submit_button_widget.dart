@@ -48,7 +48,11 @@ class SubmitButtonWidget extends StatelessWidget {
               padding: EdgeInsets.all(10.r),
               child: Text(
                 'Access Denied, Wrong Credentials',
-                style: TextStyle(color: Colors.red, fontSize: 10.sp),
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 10.sp,
+                  fontFamily: 'Montserrat',
+                ),
               ),
             ),
           );
@@ -58,7 +62,10 @@ class SubmitButtonWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         child: Text(
           'Submit',
-          style: TextStyle(fontSize: 15.sp),
+          style: TextStyle(
+            fontSize: 15.sp,
+            fontFamily: 'Montserrat',
+          ),
         ),
       ),
     );
