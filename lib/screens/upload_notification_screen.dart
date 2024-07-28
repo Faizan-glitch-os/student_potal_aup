@@ -17,6 +17,13 @@ class UploadNotificationScreen extends StatefulWidget {
 }
 
 class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
+  Widget content = Text(
+    textAlign: TextAlign.center,
+    'Enter Date, Title and Upload Image to continue',
+    style:
+        TextStyle(color: darkPurple, fontSize: 20.sp, fontFamily: 'Montserrat'),
+  );
+
   @override
   Widget build(BuildContext context) {
     final TextEditingController dateController = TextEditingController();
@@ -94,6 +101,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
                     ),
                   ),
                 ),
+                content
               ],
             ),
           ),
