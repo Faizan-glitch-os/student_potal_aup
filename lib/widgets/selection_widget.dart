@@ -5,20 +5,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:student_potal_aup/colors.dart';
 
 class SelectionWidget extends StatelessWidget {
-  const SelectionWidget(
-      {super.key,
-      required this.text,
-      required this.image,
-      required this.navigate});
+  const SelectionWidget({
+    super.key,
+    required this.text,
+    required this.image,
+    required this.navigate,
+  });
 
   final String text;
   final String image;
   final Function() navigate;
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: const Color.fromRGBO(255, 199, 39, 1),
+      borderRadius: BorderRadius.circular(10.r),
       onTap: navigate,
       child: Container(
         margin: EdgeInsets.all(10.r),
@@ -41,7 +42,8 @@ class SelectionWidget extends StatelessWidget {
             SizedBox(height: 10.h),
             Image.asset(
               image,
-              height: 100.h,
+              height: 130.h,
+              width: 100.w,
               fit: BoxFit.contain,
             ),
           ],

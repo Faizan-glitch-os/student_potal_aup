@@ -863,229 +863,272 @@ List<CourseOutline> bs1 = [
       // semester: '1',
       code: 'MT-301',
       subject: 'Calculus & Analytical Geometry',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/Calculus%20&%20analytical%20Geom.doc'),
   CourseOutline(
       // semester: '1',
       code: 'EG-301',
       subject: 'English Composition & Comprehension',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/English%20Com-comprehension.docx'),
   CourseOutline(
       // semester: '1',
       code: 'MG-301',
       subject: 'Financial Accounting',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/Finalcial%20Accounting.doc'),
   CourseOutline(
       // semester: '1',
       code: 'CS-301',
       subject: 'Introduction to Computing',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/Introduction%20to%20Computering.doc'),
   CourseOutline(
       // semester: '1',
       code: 'CS-302',
       subject: 'Programming Fundamentals',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/Programming%20Fundamentals.doc'),
   CourseOutline(
       // semester: '1',
       code: 'PK-301',
       subject: 'Pakistan Studies',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/Pakistan%20study.doc'),
 ];
 List<CourseOutline> bs2 = [
   CourseOutline(
       // semester: '2',
       code: 'MT-311',
       subject: 'Differential Equations',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Differentail%20Equations.doc'),
   CourseOutline(
       // semester: '2',
       code: 'CS-313',
       subject: 'Digital Logic & Computer Architecture',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Digital%20Logic%20&%20Computer%20Architecture.doc'),
   CourseOutline(
       // semester: '2',
       code: 'CS-312',
       subject: 'Discrete Structures',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Discrete%20Structures.doc'),
   CourseOutline(
       // semester: '2',
       code: 'SS-311',
       subject: 'Economics',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Economics.doc'),
   CourseOutline(
       // semester: '2',
       code: 'CS-311',
       subject: 'Object Oriented Paradigm',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Object%20Oriented%20Paradigm.doc'),
   CourseOutline(
       // semester: '2',
       code: 'EG-311',
       subject: 'Technical & Business Writing',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Technical%20&%20Business%20Writing.doc'),
 ];
 List<CourseOutline> bs3 = [
   CourseOutline(
       // semester: '3',
       code: 'EG-401',
       subject: 'Communication Skills',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Communication%20Skills.doc'),
   CourseOutline(
       // semester: '3',
       code: 'CS-401',
       subject: 'Data Structures & Algorithms',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Data%20Structure%20&%20Algorithms.doc'),
   CourseOutline(
       // semester: '3',
       code: 'CS-402',
       subject: 'DatabaseSystems',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Database%20Systems.doc'),
   CourseOutline(
       // semester: '3',
       code: 'MT-401',
-      subject: 'Multivari ate Calculus',
-      download: 'download'),
+      subject: 'Multivariate Calculus',
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Multivarible%20Calculus.doc'),
   CourseOutline(
       // semester: '3',
       code: 'CS-403',
       subject: 'Operating Systems',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Operating%20System.doc'),
   CourseOutline(
       // semester: '3',
       code: 'PH-401',
       subject: 'Physics ( Electromagnetism )',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Phy-Electromagnatism.doc'),
 ];
 List<CourseOutline> bs4 = [
   CourseOutline(
       // semester: '4',
       code: 'CS-411',
       subject: 'Computer Architecture',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Computer%20Architecture.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MG-411',
       subject: 'Financial Management',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Finacial%20Management.doc'),
   CourseOutline(
       // semester: '4',
       code: 'CS-412',
       subject: 'Introduction to Software Development',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Intro.%20to%20Software%20Development.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MT-411',
       subject: 'Linear Algebra',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Linear%20Algebra.doc'),
   CourseOutline(
       // semester: '4',
       code: 'CS-413',
       subject: 'Modern Programming Languages-I',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Modern%20Programming%20Languages-I.doc'),
   CourseOutline(
       // semester: '4',
       code: 'PH-411',
       subject: 'Physics-II',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Physics-II.doc'),
 ];
 List<CourseOutline> bs5 = [
   CourseOutline(
       // semester: '5',
       code: 'CS-501',
       subject: 'Computer Organization & Assembly Language',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Comp.%20Org.%20&%20Assembly.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-504',
       subject: 'Modern Programming Languages-II',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Modern%20Programming%20Languages-II.doc'),
   CourseOutline(
       // semester: '5',
       code: 'MT-501',
       subject: 'Probability & Statistics',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Probability%20&%20Statistics.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-502',
       subject: 'Software Engineering-II',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Software%20Engineering-II.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-503',
       subject: 'Theory of Automata and Formal Languages',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Theory%20of%20Automata%20and%20Formal%20Languages.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-505',
       subject: 'Web Engineering',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Web%20Engineering.doc'),
 ];
 List<CourseOutline> bs6 = [
   CourseOutline(
       // semester: '6',
       code: 'CS-512',
       subject: 'Analysis of Algorithms',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/Analysis%20of%20algorithms.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-514',
       subject: 'Computer Graphics',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/Computer%20Graphics.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-511',
       subject: 'Computer Communications and Networks',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/Computer%20Communication%20and%20Networks.doc'),
   CourseOutline(
       // semester: '6',
       code: 'PS-511',
       subject: 'Psychology',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/Psychology.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-513',
       subject: 'System Programming',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/System%20Programming.DOC'),
   CourseOutline(
       // semester: '6',
       code: 'CS-515',
       subject: 'Visual Programming - I',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/Visual_Programming-I.doc'),
 ];
 List<CourseOutline> bs7 = [
   CourseOutline(
       // semester: '7',
       code: 'CS-601',
       subject: 'Artificial Intelligence',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Artificial%20Intelligence.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-602',
       subject: 'Compiler Construction',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Compiler%20Consturction.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-605',
       subject: 'Data & Network Security',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Data%20and%20Network%20Security.doc'),
   CourseOutline(
       // semester: '7',
       code: 'PS-604',
       subject: 'Distributed Database Systems',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Distributed%20Database%20Systems.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-606',
       subject: 'Numerical Computing',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Numerical%20Computing.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-603',
       subject: 'Visual Programming - II',
-      download: 'download'),
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Visual%20Programming-II.doc'),
 ];
 List<CourseOutline> bs8 = [
   CourseOutline(
       // semester: '8',
       code: 'SS-611',
       subject: 'Professional Practices',
-      download: 'download')
+      download:
+          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VIII/Professional%20Practices.doc')
 ];

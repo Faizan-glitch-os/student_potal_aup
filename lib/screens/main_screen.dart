@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:popover/popover.dart';
 import 'package:student_potal_aup/screens/results_screen.dart';
 
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
+import 'package:student_potal_aup/screens/uploading_options_pop_over.dart';
 import '../widgets/scaffold_background_widget.dart';
 import 'package:student_potal_aup/colors.dart';
 import '../widgets/selection_widget.dart';
@@ -59,14 +62,45 @@ class MainScreen extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SelectionWidget(
-                    text: 'Results',
+                    text: '     Results     ',
                     image: 'assets/images/results.gif',
                     navigate: () {
                       NavigateToScreen(ResultsScreen());
                     },
                   ),
+                  SelectionWidget(
+                      text: '    Outlines    ',
+                      image: 'assets/images/course.gif',
+                      navigate: () {
+                        showPopover(
+                            barrierColor: Colors.black.withOpacity(.5),
+                            backgroundColor: darkPurple,
+                            height: 200.h,
+                            context: context,
+                            bodyBuilder: (context) =>
+                                UploadingOptionsPopOver());
+                        // showPopover(
+                        //     backgroundColor: darkPurple,
+                        //     height: 300.h,
+                        //     context: context,
+                        //     bodyBuilder: (context) {
+                        //       return Row(
+                        //         children: [
+                        //           ElevatedButton(
+                        //             onPressed: () {},
+                        //             child: Text('CS Course Outline'),
+                        //           ),
+                        //           ElevatedButton(
+                        //             onPressed: () {},
+                        //             child: Text('IT Course Outline'),
+                        //           ),
+                        //         ],
+                        //       );
+                        //     });
+                      })
                 ],
               )
               // Row(
