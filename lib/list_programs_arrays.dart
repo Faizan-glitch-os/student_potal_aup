@@ -635,13 +635,13 @@ List<CourseOutline> it1 = [
   CourseOutline(
       // semester: '1',
       code: 'MT-301',
-      subject: 'Calculus & Analytical Geometry',
+      subject: 'Calculus &\nAnalytical Geometry',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/Calculus%20&%20Analytical%20Geom.doc'),
   CourseOutline(
       // semester: '1',
       code: 'EG-301',
-      subject: 'English Composition & Comprehension',
+      subject: 'English Composition &\nComprehension',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/English%20Com-comprehension.docx'),
   CourseOutline(
@@ -653,7 +653,7 @@ List<CourseOutline> it1 = [
   CourseOutline(
       // semester: '1',
       code: 'IT-301',
-      subject: 'Introduction to Computing',
+      subject: 'Introduction to\nComputing',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/Introduction%20to%20Computing.doc'),
   CourseOutline(
@@ -696,13 +696,13 @@ List<CourseOutline> it2 = [
   CourseOutline(
       // semester: '2',
       code: 'IT-311',
-      subject: 'Object Oriented Paradigm',
+      subject: 'Object Oriented\nParadigm',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Object%20Oriented%20Paradigm.doc'),
   CourseOutline(
       // semester: '2',
       code: 'EG-311',
-      subject: 'Technical & Business Writing',
+      subject: 'Technical &\nBusiness Writing',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Technical%20&%20Business%20Writing.doc'),
 ];
@@ -716,7 +716,7 @@ List<CourseOutline> it3 = [
   CourseOutline(
       // semester: '3',
       code: 'IT-401',
-      subject: 'Data Structures & Algorithms',
+      subject: 'Data Structures &\nAlgorithms',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Data%20Structure%20&%20Algorithms.doc'),
   CourseOutline(
@@ -734,7 +734,7 @@ List<CourseOutline> it3 = [
   CourseOutline(
       // semester: '3',
       code: 'IT-403',
-      subject: 'Modern Programming Languages-I',
+      subject: 'Modern Programming\nLanguages-I',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Multivarible%20Calculus.doc'),
   CourseOutline(
@@ -754,7 +754,7 @@ List<CourseOutline> it4 = [
   CourseOutline(
       // semester: '4',
       code: 'IT-414',
-      subject: 'Digital Logic & Computer Architecture',
+      subject: 'Digital Logic &\nComputer Architecture',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Digital%20Logic%20&%20Computer%20Architecture.doc'),
   CourseOutline(
@@ -766,7 +766,7 @@ List<CourseOutline> it4 = [
   CourseOutline(
       // semester: '4',
       code: 'IT-413',
-      subject: 'Modern Programming Languages-II',
+      subject: 'Modern Programming\nLanguages-II',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Modern%20programming%20Languages-II.doc'),
   CourseOutline(
@@ -786,13 +786,13 @@ List<CourseOutline> it5 = [
   CourseOutline(
       // semester: '5',
       code: 'IT-503',
-      subject: 'Computer Communication & Networks',
+      subject: 'Computer Communication\n& Networks',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Computer_Communication_and_Networks.doc'),
   CourseOutline(
       // semester: '5',
       code: 'IT-504',
-      subject: 'Distributed Database Systems',
+      subject: 'Distributed Database\nSystems',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Distributed%20Database%20Systems.doc'),
   CourseOutline(
@@ -810,7 +810,7 @@ List<CourseOutline> it5 = [
   CourseOutline(
       // semester: '5',
       code: 'IT-501',
-      subject: 'Introduction to Software Development',
+      subject: 'Introduction to\nSoftware Development',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Software%20Development.doc'),
   CourseOutline(
@@ -830,7 +830,7 @@ List<CourseOutline> it6 = [
   CourseOutline(
       // semester: '6',
       code: 'IT-512',
-      subject: 'Network Management & Security',
+      subject: 'Network Management\n& Security',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/Network%20Management%20&%20Security.doc'),
   CourseOutline(
@@ -862,7 +862,7 @@ List<CourseOutline> it7 = [
   CourseOutline(
       // semester: '7',
       code: 'IT-604',
-      subject: 'Human Computer Interaction',
+      subject: 'Human Computer\nInteraction',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VII/Human%20Computer%20Interaction.doc'),
   CourseOutline(
@@ -903,13 +903,13 @@ List<CourseOutline> bs1 = [
   CourseOutline(
       // semester: '1',
       code: 'MT-301',
-      subject: 'Calculus & Analytical Geometry',
+      subject: 'Calculus &\nAnalytical Geometry',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/Calculus%20&%20analytical%20Geom.doc'),
   CourseOutline(
       // semester: '1',
       code: 'EG-301',
-      subject: 'English Composition & Comprehension',
+      subject: 'English Composition\n& Comprehension',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-I/English%20Com-comprehension.docx'),
   CourseOutline(
@@ -947,7 +947,7 @@ List<CourseOutline> bs2 = [
   CourseOutline(
       // semester: '2',
       code: 'CS-313',
-      subject: 'Digital Logic & Computer Architecture',
+      subject: 'Digital Logic &\nComputer Architecture',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Digital%20Logic%20&%20Computer%20Architecture.doc'),
   CourseOutline(
@@ -971,7 +971,7 @@ List<CourseOutline> bs2 = [
   CourseOutline(
       // semester: '2',
       code: 'EG-311',
-      subject: 'Technical & Business Writing',
+      subject: 'Technical &\nBusiness Writing',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-II/Technical%20&%20Business%20Writing.doc'),
 ];
@@ -985,7 +985,7 @@ List<CourseOutline> bs3 = [
   CourseOutline(
       // semester: '3',
       code: 'CS-401',
-      subject: 'Data Structures & Algorithms',
+      subject: 'Data Structures &\nAlgorithms',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-III/Data%20Structure%20&%20Algorithms.doc'),
   CourseOutline(
@@ -1029,7 +1029,7 @@ List<CourseOutline> bs4 = [
   CourseOutline(
       // semester: '4',
       code: 'CS-412',
-      subject: 'Introduction to Software Development',
+      subject: 'Introduction to\nSoftware Development',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Intro.%20to%20Software%20Development.doc'),
   CourseOutline(
@@ -1041,7 +1041,7 @@ List<CourseOutline> bs4 = [
   CourseOutline(
       // semester: '4',
       code: 'CS-413',
-      subject: 'Modern Programming Languages-I',
+      subject: 'Modern Programming\nLanguages-I',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-IV/Modern%20Programming%20Languages-I.doc'),
   CourseOutline(
@@ -1055,13 +1055,13 @@ List<CourseOutline> bs5 = [
   CourseOutline(
       // semester: '5',
       code: 'CS-501',
-      subject: 'Computer Organization & Assembly Language',
+      subject: 'Computer Organization &\nAssembly Language',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Comp.%20Org.%20&%20Assembly.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-504',
-      subject: 'Modern Programming Languages-II',
+      subject: 'Modern Programming\nLanguages-II',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Modern%20Programming%20Languages-II.doc'),
   CourseOutline(
@@ -1079,7 +1079,7 @@ List<CourseOutline> bs5 = [
   CourseOutline(
       // semester: '5',
       code: 'CS-503',
-      subject: 'Theory of Automata and Formal Languages',
+      subject: 'Theory of Automata &\nFormal Languages',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-V/Theory%20of%20Automata%20and%20Formal%20Languages.doc'),
   CourseOutline(
@@ -1105,7 +1105,7 @@ List<CourseOutline> bs6 = [
   CourseOutline(
       // semester: '6',
       code: 'CS-511',
-      subject: 'Computer Communications and Networks',
+      subject: 'Computer Communications\n & Networks',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VI/Computer%20Communication%20and%20Networks.doc'),
   CourseOutline(
@@ -1149,7 +1149,7 @@ List<CourseOutline> bs7 = [
   CourseOutline(
       // semester: '7',
       code: 'PS-604',
-      subject: 'Distributed Database Systems',
+      subject: 'Distributed Database\nSystems',
       download:
           'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSCS/BSCS-VII/Distributed%20Database%20Systems.doc'),
   CourseOutline(
