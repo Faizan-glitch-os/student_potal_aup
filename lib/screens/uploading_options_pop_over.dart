@@ -42,26 +42,26 @@ class UploadingOptionsPopOver extends StatelessWidget {
               fontFamily: 'Montserrat',
             ),
           ),
-          Spacer(),
+          const Spacer(),
           UploadingButtonWidget(
               horizontalPadding: 20,
               label: 'Latest Notification',
               navigateScreen: () {
-                NavigateToScreen(UploadNotificationScreen());
+                NavigateToScreen(const UploadNotificationScreen());
               }),
           SizedBox(height: 5.h),
           UploadingButtonWidget(
               horizontalPadding: 20,
               label: 'Scholarship',
               navigateScreen: () {
-                NavigateToScreen(UploadScholarshipScreen());
+                NavigateToScreen(const UploadScholarshipScreen());
               }),
           SizedBox(height: 5.h),
           UploadingButtonWidget(
             horizontalPadding: 20,
             label: 'Result',
             navigateScreen: () {
-              NavigateToScreen(UploadResultScreen());
+              NavigateToScreen(const UploadResultScreen());
             },
           ),
         ],

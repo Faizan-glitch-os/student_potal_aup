@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -78,18 +79,18 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
               ),
               Image.asset(
                 'assets/images/success.gif',
-                height: 100.h,
+                height: 50.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
         ),
       );
 
       Navigator.of(context).pop();
     } catch (error) {
-      print(error);
+      print('catch block');
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Column(
@@ -104,12 +105,12 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
               ),
               Image.asset(
                 'assets/images/fail.gif',
-                height: 100.h,
+                height: 50.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
         ),
       );
     }

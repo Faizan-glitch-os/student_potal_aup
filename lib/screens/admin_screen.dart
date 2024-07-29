@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:popover/popover.dart';
 import 'package:student_potal_aup/colors.dart';
 import 'package:student_potal_aup/screens/upload_notification_screen.dart';
 import 'package:student_potal_aup/screens/upload_result_screen.dart';
 import 'package:student_potal_aup/screens/upload_scholarship_screen.dart';
-import 'package:student_potal_aup/screens/uploading_options_pop_over.dart';
 
-import '../widgets/scaffold_background_widget.dart';
-import '../widgets/submit_button_widget.dart';
 import '../widgets/text_field_widget.dart';
 import '../widgets/uploading_button_widget.dart';
 
@@ -71,21 +67,21 @@ class _AdminScreenState extends State<AdminScreen> {
                 horizontalPadding: 20,
                 label: 'Latest Notification',
                 navigateScreen: () {
-                  NavigateToScreen(UploadNotificationScreen());
+                  NavigateToScreen(const UploadNotificationScreen());
                 }),
             SizedBox(height: 5.h),
             UploadingButtonWidget(
                 horizontalPadding: 20,
                 label: 'Scholarship',
                 navigateScreen: () {
-                  NavigateToScreen(UploadScholarshipScreen());
+                  NavigateToScreen(const UploadScholarshipScreen());
                 }),
             SizedBox(height: 5.h),
             UploadingButtonWidget(
               horizontalPadding: 20,
               label: 'Result',
               navigateScreen: () {
-                NavigateToScreen(UploadResultScreen());
+                NavigateToScreen(const UploadResultScreen());
               },
             ),
           ],

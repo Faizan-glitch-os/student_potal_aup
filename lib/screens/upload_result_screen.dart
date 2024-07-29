@@ -49,12 +49,12 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
               ),
               Image.asset(
                 'assets/images/success.gif',
-                height: 100.h,
+                height: 50.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
         ),
       );
 
@@ -75,12 +75,12 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
               ),
               Image.asset(
                 'assets/images/fail.gif',
-                height: 100.h,
+                height: 50.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
         ),
       );
     }

@@ -25,7 +25,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: TextStyle(fontFamily: 'Montserrat', color: halfWhite),
+      style: const TextStyle(fontFamily: 'Montserrat', color: halfWhite),
       cursorColor: golden,
       obscureText: widget.obscureText,
       textAlign: TextAlign.center,

@@ -9,7 +9,6 @@ import 'package:student_potal_aup/colors.dart';
 import 'package:student_potal_aup/widgets/show_results_widget.dart';
 
 import '../data_model.dart';
-import '../widgets/show_news_widget.dart';
 
 class ResultsScreen extends StatefulWidget {
   ResultsScreen({super.key});
@@ -19,13 +18,13 @@ class ResultsScreen extends StatefulWidget {
 }
 
 class _ResultsScreenState extends State<ResultsScreen> {
-  late Future<List<Notifications>> LoadedNews;
+  late Future<List<Notifications>> loadedNews;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    LoadedNews = LoadNews();
+    loadedNews = LoadNews();
   }
 
   Future<List<Notifications>> LoadNews() async {
@@ -58,52 +57,56 @@ class _ResultsScreenState extends State<ResultsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: halfWhite,
-        body: FutureBuilder(
-            future: LoadedNews,
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
-                  child: CircularProgressIndicator(
-                    color: golden,
+      backgroundColor: halfWhite,
+      body: FutureBuilder(
+        future: loadedNews,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(
+                color: golden,
+              ),
+            );
+          }
+          if (snapshot.hasError) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/offline.gif',
+                    height: 150.h,
+                    fit: BoxFit.cover,
                   ),
-                );
-              }
-              if (snapshot.hasError) {
-                return Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/offline.gif',
-                        height: 150.h,
-                        fit: BoxFit.cover,
-                      ),
-                      Text(
-                        'May be your Internet is not working',
-                        style: TextStyle(
-                            color: darkPurple,
-                            fontSize: 20.sp,
-                            fontFamily: 'Montserrat'),
-                      ),
-                    ],
-                  ),
-                );
-              }
-              if (snapshot.data!.isEmpty) {
-                return Center(
-                  child: Text(
-                    textAlign: TextAlign.center,
-                    'No New Notifications Yet',
+                  Text(
+                    'May be your Internet is not working',
                     style: TextStyle(
-                        color: halfWhite,
-                        fontFamily: 'Montserrat',
-                        fontSize: 30.sp),
+                        color: darkPurple,
+                        fontSize: 20.sp,
+                        fontFamily: 'Montserrat'),
                   ),
-                );
-              }
+                ],
+              ),
+            );
+          }
+          if (snapshot.data!.isEmpty) {
+            return Center(
+              child: Text(
+                textAlign: TextAlign.center,
+                'No New Notifications Yet',
+                style: TextStyle(
+                    color: halfWhite,
+                    fontFamily: 'Montserrat',
+                    fontSize: 30.sp),
+              ),
+            );
+          }
 
-              return ShowResultsWidget(newsData: snapshot.data!);
-            }));
+          return ShowResultsWidget(
+            newsData: snapshot.data!,
+          );
+        },
+      ),
+    );
   }
 }

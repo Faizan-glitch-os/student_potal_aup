@@ -56,7 +56,7 @@ class AllSubjects extends StatelessWidget {
                 ),
               ],
             ),
-            Divider(
+            const Divider(
               color: golden,
             ),
             ...subjects.map(

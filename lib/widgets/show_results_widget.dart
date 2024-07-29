@@ -5,10 +5,11 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:student_potal_aup/colors.dart';
 
-import 'favorite_button_widget.dart';
-
 class ShowResultsWidget extends StatelessWidget {
-  const ShowResultsWidget({super.key, required this.newsData});
+  const ShowResultsWidget({
+    super.key,
+    required this.newsData,
+  });
 
   final List newsData;
 
@@ -63,7 +64,7 @@ class ShowResultsWidget extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   IconButton(
                     onPressed: () {
                       Uri url = Uri.parse(newsData[index].image);

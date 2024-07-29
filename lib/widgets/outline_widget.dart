@@ -38,7 +38,7 @@ class OutlineWidget extends StatelessWidget {
       margin: EdgeInsets.all(5.r),
       padding: EdgeInsets.all(5.r),
       decoration: BoxDecoration(
-        gradient: RadialGradient(colors: [darkBlue, darkGrey]),
+        gradient: const RadialGradient(colors: [darkBlue, darkGrey]),
         border: Border.all(color: golden),
         borderRadius: BorderRadius.circular(10.r),
       ),
@@ -57,14 +57,14 @@ class OutlineWidget extends StatelessWidget {
             horizontalPadding: 1,
             label: 'BSCS Course',
             navigateScreen: () {
-              NavigateToScreen(BscsScreen());
+              NavigateToScreen(const BscsScreen());
             },
           ),
           UploadingButtonWidget(
             horizontalPadding: 1,
             label: 'BSIT Course',
             navigateScreen: () {
-              NavigateToScreen(BsitScreen());
+              NavigateToScreen(const BsitScreen());
             },
           ),
         ],

@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(360, 640),
+      designSize: const Size(360, 640),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
           ),
-          home: SplashScreen(),
+          home: const SplashScreen(),
         );
       },
     );

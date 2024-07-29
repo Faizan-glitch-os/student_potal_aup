@@ -25,7 +25,7 @@ class SelectionWidget extends StatelessWidget {
         margin: EdgeInsets.all(10.r),
         padding: EdgeInsets.all(10.r),
         decoration: BoxDecoration(
-          gradient: RadialGradient(colors: [darkBlue, darkGrey]),
+          gradient: const RadialGradient(colors: [darkBlue, darkGrey]),
           border: Border.all(color: golden),
           borderRadius: BorderRadius.circular(10.r),
         ),

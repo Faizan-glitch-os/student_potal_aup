@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:student_potal_aup/colors.dart';
 
 class ShowNewsWidget extends StatelessWidget {
-  const ShowNewsWidget({super.key, required this.newsData});
+  const ShowNewsWidget({
+    super.key,
+    required this.newsData,
+  });
 
   final List newsData;
 
@@ -18,8 +22,7 @@ class ShowNewsWidget extends StatelessWidget {
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            side: BorderSide(
-                color: Color.fromRGBO(255, 199, 39, 1), width: 1.5.r)),
+            side: BorderSide(color: golden, width: 1.5.r)),
         context: context,
         builder: (ctx) => IntrinsicHeight(
           child: InteractiveViewer(

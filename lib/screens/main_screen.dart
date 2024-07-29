@@ -1,14 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:popover/popover.dart';
 import 'package:student_potal_aup/screens/admin_screen.dart';
 import 'package:student_potal_aup/screens/results_screen.dart';
 
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
-import 'package:student_potal_aup/screens/uploading_options_pop_over.dart';
 import 'package:student_potal_aup/widgets/outline_widget.dart';
-import '../widgets/scaffold_background_widget.dart';
 import 'package:student_potal_aup/colors.dart';
 import '../widgets/selection_widget.dart';
 import 'notifications_screen.dart';
@@ -47,7 +44,7 @@ class MainScreen extends StatelessWidget {
             IconButton(
               highlightColor: golden.withOpacity(.2),
               onPressed: () {
-                NavigateToScreen(AdminScreen());
+                NavigateToScreen(const AdminScreen());
               },
               icon: Icon(
                 Icons.admin_panel_settings,
@@ -84,7 +81,7 @@ class MainScreen extends StatelessWidget {
                     NavigateToScreen(ResultsScreen());
                   },
                 ),
-                OutlineWidget(),
+                const OutlineWidget(),
               ],
             ),
             // Row(

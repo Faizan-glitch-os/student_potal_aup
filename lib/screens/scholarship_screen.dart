@@ -18,15 +18,13 @@ class ScholarshipScreen extends StatefulWidget {
 }
 
 class _ScholarshipScreenState extends State<ScholarshipScreen> {
-  // List<Notifications> latestScholarships = [];
-
-  late Future<List<Notifications>> LoadedNews;
+  late Future<List<Notifications>> loadedNews;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    LoadedNews = LoadNews();
+    loadedNews = LoadNews();
   }
 
   Future<List<Notifications>> LoadNews() async {
@@ -59,52 +57,54 @@ class _ScholarshipScreenState extends State<ScholarshipScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: halfWhite,
-        body: FutureBuilder(
-            future: LoadedNews,
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
-                  child: CircularProgressIndicator(
-                    color: golden,
+      backgroundColor: halfWhite,
+      body: FutureBuilder(
+        future: loadedNews,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(
+                color: golden,
+              ),
+            );
+          }
+          if (snapshot.hasError) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/offline.gif',
+                    height: 150.h,
+                    fit: BoxFit.cover,
                   ),
-                );
-              }
-              if (snapshot.hasError) {
-                return Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/offline.gif',
-                        height: 150.h,
-                        fit: BoxFit.cover,
-                      ),
-                      Text(
-                        'May be your Internet is not working',
-                        style: TextStyle(
-                            color: darkPurple,
-                            fontSize: 20.sp,
-                            fontFamily: 'Montserrat'),
-                      ),
-                    ],
-                  ),
-                );
-              }
-              if (snapshot.data!.isEmpty) {
-                return Center(
-                  child: Text(
-                    textAlign: TextAlign.center,
-                    'No New Notifications Yet',
+                  Text(
+                    'May be your Internet is not working',
                     style: TextStyle(
-                        color: halfWhite,
-                        fontFamily: 'Montserrat',
-                        fontSize: 30.sp),
+                        color: darkPurple,
+                        fontSize: 20.sp,
+                        fontFamily: 'Montserrat'),
                   ),
-                );
-              }
+                ],
+              ),
+            );
+          }
+          if (snapshot.data!.isEmpty) {
+            return Center(
+              child: Text(
+                textAlign: TextAlign.center,
+                'No New Notifications Yet',
+                style: TextStyle(
+                    color: darkGrey, fontFamily: 'Montserrat', fontSize: 30.sp),
+              ),
+            );
+          }
 
-              return ShowNewsWidget(newsData: snapshot.data!);
-            }));
+          return ShowNewsWidget(
+            newsData: snapshot.data!,
+          );
+        },
+      ),
+    );
   }
 }
