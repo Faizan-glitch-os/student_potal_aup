@@ -1,9 +1,12 @@
+import 'dart:convert';
 import 'dart:io';
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:http/http.dart' as http;
 
 import 'package:student_potal_aup/colors.dart';
 import 'package:student_potal_aup/widgets/text_field_widget.dart';
@@ -17,10 +20,136 @@ class UploadScholarshipScreen extends StatefulWidget {
 }
 
 class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
+  Widget content = Text(
+    textAlign: TextAlign.center,
+    'Enter Date, Title and Upload Image to continue',
+    style:
+        TextStyle(color: darkPurple, fontSize: 20.sp, fontFamily: 'Montserrat'),
+  );
+
+  File? pickedImage;
+
+  void PickPicture() async {
+    final image = await ImagePicker()
+        .pickImage(source: ImageSource.gallery, imageQuality: 80);
+
+    if (image == null) {
+      return null;
+    }
+
+    setState(() {
+      pickedImage = File(image.path);
+    });
+  }
+
+  void UploadPicture(String date, String title) async {
+    final storageRef = FirebaseStorage.instance
+        .ref()
+        .child('uploaded-scholarships')
+        .child('${DateTime.now()}.jpg');
+    try {
+      await storageRef.putFile(pickedImage!);
+
+      String imageUrl = await storageRef.getDownloadURL();
+
+      final url = Uri.https('fyp-demo-futter-default-rtdb.firebaseio.com',
+          'uploaded-scholarships.json');
+
+      http.post(
+        url,
+        headers: {'Content-Type': 'Applications/json'},
+        body: json.encode(
+          {'date': date, 'title': title, 'image': imageUrl},
+        ),
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Column(
+            children: [
+              Text(
+                textAlign: TextAlign.center,
+                'Scholarship Uploaded Successfully',
+                style: TextStyle(
+                    color: darkPurple,
+                    fontFamily: 'Montserrat',
+                    fontSize: 20.sp),
+              ),
+              Image.asset(
+                'assets/images/success.gif',
+                height: 100.h,
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
+          duration: Duration(seconds: 2),
+        ),
+      );
+
+      Navigator.of(context).pop();
+    } catch (error) {
+      print(error);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Column(
+            children: [
+              Text(
+                textAlign: TextAlign.center,
+                'Failed to Upload, please try again later',
+                style: TextStyle(
+                    color: Colors.red,
+                    fontFamily: 'Montserrat',
+                    fontSize: 20.sp),
+              ),
+              Image.asset(
+                'assets/images/fail.gif',
+                height: 100.h,
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
+          duration: Duration(seconds: 2),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final TextEditingController dateController = TextEditingController();
     final TextEditingController titleController = TextEditingController();
+
+    Widget pickContent = TextButton.icon(
+      style: ButtonStyle(
+          overlayColor: WidgetStateProperty.all(darkPurple.withOpacity(.2))),
+      onPressed: PickPicture,
+      icon: Icon(
+        Icons.photo,
+        size: 30.r,
+        color: darkPurple,
+      ),
+      label: Text(
+        'Tap to Upload',
+        style: TextStyle(
+          color: darkPurple,
+          fontSize: 20.sp,
+          fontFamily: 'Montserrat',
+        ),
+      ),
+    );
+
+    if (pickedImage != null) {
+      setState(
+        () {
+          pickContent = Image.file(
+            pickedImage!,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          );
+        },
+      );
+    }
 
     return Scaffold(
       backgroundColor: halfWhite,
@@ -33,9 +162,25 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                 Text(
                   textAlign: TextAlign.center,
                   'Uploading Scholarship',
-                  style: TextStyle(fontSize: 40.sp, color: golden),
+                  style: TextStyle(
+                    fontSize: 40.sp,
+                    color: golden,
+                    fontFamily: 'Montserrat',
+                  ),
                 ),
                 SizedBox(height: 30.h),
+                InkWell(
+                  onTap: PickPicture,
+                  child: Container(
+                      height: 300.h,
+                      width: ScreenUtil().screenWidth,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5.r),
+                        border: Border.all(width: 1, color: golden),
+                      ),
+                      child: pickContent),
+                ),
+                SizedBox(height: 10.h),
                 TextFieldWidget(
                     textController: dateController,
                     label: 'Date',
@@ -48,38 +193,40 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                     keyboardType: TextInputType.text,
                     obscureText: false),
                 SizedBox(height: 10.h),
-                Container(
-                  height: 300.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5.r),
-                    border: Border.all(width: 1, color: golden),
-                  ),
-                  child: TextButton.icon(
-                    style: ButtonStyle(
-                        overlayColor: WidgetStateProperty.all(
-                            darkPurple.withOpacity(.2))),
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.photo,
-                      size: 30.r,
-                      color: darkPurple,
-                    ),
-                    label: Text(
-                      'Tap to Upload',
-                      style: TextStyle(color: darkPurple, fontSize: 20.sp),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10.h),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (dateController.text.isEmpty ||
+                        titleController.text.isEmpty ||
+                        pickedImage == null) {
+                      setState(
+                        () {
+                          content = Text(
+                            textAlign: TextAlign.center,
+                            'Please fill all the required fields',
+                            style: TextStyle(
+                                color: Colors.redAccent,
+                                fontSize: 20.sp,
+                                fontFamily: 'Montserrat'),
+                          );
+                        },
+                      );
+                    } else {
+                      UploadPicture(dateController.text, titleController.text);
+                    }
+                  },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(darkPurple),
                     foregroundColor: WidgetStateProperty.all(halfWhite),
                   ),
-                  child: Text('Upload'),
+                  child: Text(
+                    'Upload',
+                    style: TextStyle(
+                      fontSize: 15.sp,
+                      fontFamily: 'Montserrat',
+                    ),
+                  ),
                 ),
+                content
               ],
             ),
           ),

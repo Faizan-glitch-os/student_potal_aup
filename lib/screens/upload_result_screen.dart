@@ -1,9 +1,8 @@
-import 'dart:io';
-
+import 'dart:convert';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:http/http.dart' as http;
 
 import 'package:student_potal_aup/colors.dart';
 import 'package:student_potal_aup/widgets/text_field_widget.dart';
@@ -16,10 +15,83 @@ class UploadResultScreen extends StatefulWidget {
 }
 
 class _UploadResultScreenState extends State<UploadResultScreen> {
+  Widget content = Text(
+    textAlign: TextAlign.center,
+    'Enter Date, Title and Download Link',
+    style:
+        TextStyle(color: darkPurple, fontSize: 20.sp, fontFamily: 'Montserrat'),
+  );
+
+  void UploadResult(String date, String title, String downloadLink) async {
+    try {
+      final url = Uri.https('fyp-demo-futter-default-rtdb.firebaseio.com',
+          'uploaded-results.json');
+
+      http.post(
+        url,
+        headers: {'Content-Type': 'Applications/json'},
+        body: json.encode(
+          {'date': date, 'title': title, 'image': downloadLink},
+        ),
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Column(
+            children: [
+              Text(
+                textAlign: TextAlign.center,
+                'Result Uploaded Successfully',
+                style: TextStyle(
+                    color: darkPurple,
+                    fontFamily: 'Montserrat',
+                    fontSize: 20.sp),
+              ),
+              Image.asset(
+                'assets/images/success.gif',
+                height: 100.h,
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
+          duration: Duration(seconds: 2),
+        ),
+      );
+
+      Navigator.of(context).pop();
+    } catch (error) {
+      print(error);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Column(
+            children: [
+              Text(
+                textAlign: TextAlign.center,
+                'Failed to Upload, please try again later',
+                style: TextStyle(
+                    color: Colors.red,
+                    fontFamily: 'Montserrat',
+                    fontSize: 20.sp),
+              ),
+              Image.asset(
+                'assets/images/fail.gif',
+                height: 100.h,
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
+          duration: Duration(seconds: 2),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final TextEditingController dateController = TextEditingController();
     final TextEditingController titleController = TextEditingController();
+    final TextEditingController downloadLinkController =
+        TextEditingController();
 
     return Scaffold(
       backgroundColor: halfWhite,
@@ -32,7 +104,11 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                 Text(
                   textAlign: TextAlign.center,
                   'Uploading Result',
-                  style: TextStyle(fontSize: 40.sp, color: golden),
+                  style: TextStyle(
+                    fontSize: 40.sp,
+                    color: golden,
+                    fontFamily: 'Montserrat',
+                  ),
                 ),
                 SizedBox(height: 30.h),
                 TextFieldWidget(
@@ -47,38 +123,47 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                     keyboardType: TextInputType.text,
                     obscureText: false),
                 SizedBox(height: 10.h),
-                Container(
-                  height: 300.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5.r),
-                    border: Border.all(width: 1, color: golden),
-                  ),
-                  child: TextButton.icon(
-                    style: ButtonStyle(
-                        overlayColor: WidgetStateProperty.all(
-                            darkPurple.withOpacity(.2))),
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.photo,
-                      size: 30.r,
-                      color: darkPurple,
-                    ),
-                    label: Text(
-                      'Tap to Upload',
-                      style: TextStyle(color: darkPurple, fontSize: 20.sp),
-                    ),
-                  ),
-                ),
+                TextFieldWidget(
+                    textController: downloadLinkController,
+                    label: 'Download Link',
+                    keyboardType: TextInputType.text,
+                    obscureText: false),
                 SizedBox(height: 10.h),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (dateController.text.isEmpty ||
+                        titleController.text.isEmpty ||
+                        downloadLinkController.text.isEmpty) {
+                      setState(
+                        () {
+                          content = Text(
+                            textAlign: TextAlign.center,
+                            'Please fill all the required fields',
+                            style: TextStyle(
+                                color: Colors.redAccent,
+                                fontSize: 20.sp,
+                                fontFamily: 'Montserrat'),
+                          );
+                        },
+                      );
+                    } else {
+                      UploadResult(dateController.text, titleController.text,
+                          downloadLinkController.text);
+                    }
+                  },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(darkPurple),
                     foregroundColor: WidgetStateProperty.all(halfWhite),
                   ),
-                  child: Text('Upload'),
+                  child: Text(
+                    'Upload',
+                    style: TextStyle(
+                      fontSize: 15.sp,
+                      fontFamily: 'Montserrat',
+                    ),
+                  ),
                 ),
+                content
               ],
             ),
           ),

@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"fyp-demo-futter","appId":"1:64548637847:android:6a461e9863078661e12dd2","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"fyp-demo-futter","configurations":{"android":"1:64548637847:android:6a461e9863078661e12dd2","ios":"1:64548637847:ios:5e50df3e95397ed6e12dd2"}}}}}}

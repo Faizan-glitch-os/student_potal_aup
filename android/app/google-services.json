@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64548637847",
+    "project_id": "fyp-demo-futter",
+    "storage_bucket": "fyp-demo-futter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64548637847:android:6a461e9863078661e12dd2",
+        "android_client_info": {
+          "package_name": "com.student.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0bNobC83o_2ukVfEbsLXvdTPsPAw38ZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

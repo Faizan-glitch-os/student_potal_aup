@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:student_potal_aup/colors.dart';
 
-import 'favorite_button_widget.dart';
-
 class ShowNewsWidget extends StatelessWidget {
   const ShowNewsWidget({super.key, required this.newsData});
 
@@ -19,7 +17,7 @@ class ShowNewsWidget extends StatelessWidget {
         isScrollControlled: true,
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.r)),
+            borderRadius: BorderRadius.all(Radius.circular(10.r)),
             side: BorderSide(
                 color: Color.fromRGBO(255, 199, 39, 1), width: 1.5.r)),
         context: context,
@@ -31,7 +29,7 @@ class ShowNewsWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.r),
               child: Padding(
                 padding: EdgeInsets.all(10.r),
-                child: Image.asset(
+                child: Image.network(
                   newsData[index].image,
                   fit: BoxFit.cover,
                 ),
