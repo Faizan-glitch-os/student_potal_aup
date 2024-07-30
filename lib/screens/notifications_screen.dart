@@ -72,6 +72,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     'assets/images/offline.gif',
@@ -79,6 +80,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                     fit: BoxFit.cover,
                   ),
                   Text(
+                    textAlign: TextAlign.center,
                     'May be your Internet is not working',
                     style: TextStyle(
                         color: darkPurple,

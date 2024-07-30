@@ -27,6 +27,14 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
         TextStyle(color: darkPurple, fontSize: 20.sp, fontFamily: 'Montserrat'),
   );
 
+  Widget buttonContent = Text(
+    'Upload',
+    style: TextStyle(
+      fontSize: 15.sp,
+      fontFamily: 'Montserrat',
+    ),
+  );
+
   File? pickedImage;
 
   void PickPicture() async {
@@ -65,6 +73,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          backgroundColor: halfWhite,
           content: Column(
             children: [
               Text(
@@ -73,16 +82,16 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                 style: TextStyle(
                     color: darkPurple,
                     fontFamily: 'Montserrat',
-                    fontSize: 20.sp),
+                    fontSize: 25.sp),
               ),
               Image.asset(
                 'assets/images/success.gif',
-                height: 50.h,
+                height: 100.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: const Duration(seconds: 2),
+          duration: const Duration(seconds: 3),
         ),
       );
 
@@ -91,6 +100,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
       print(error);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          backgroundColor: halfWhite,
           content: Column(
             children: [
               Text(
@@ -99,16 +109,16 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                 style: TextStyle(
                     color: Colors.red,
                     fontFamily: 'Montserrat',
-                    fontSize: 20.sp),
+                    fontSize: 25.sp),
               ),
               Image.asset(
                 'assets/images/fail.gif',
-                height: 50.h,
+                height: 100.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: const Duration(seconds: 2),
+          duration: const Duration(seconds: 3),
         ),
       );
     }
@@ -143,7 +153,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
         () {
           pickContent = Image.file(
             pickedImage!,
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
             width: double.infinity,
             height: double.infinity,
           );
@@ -194,38 +204,37 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                     obscureText: false),
                 SizedBox(height: 10.h),
                 ElevatedButton(
-                  onPressed: () {
-                    if (dateController.text.isEmpty ||
-                        titleController.text.isEmpty ||
-                        pickedImage == null) {
-                      setState(
-                        () {
-                          content = Text(
-                            textAlign: TextAlign.center,
-                            'Please fill all the required fields',
-                            style: TextStyle(
-                                color: Colors.redAccent,
-                                fontSize: 20.sp,
-                                fontFamily: 'Montserrat'),
-                          );
-                        },
-                      );
-                    } else {
-                      UploadPicture(dateController.text, titleController.text);
-                    }
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(darkPurple),
-                    foregroundColor: WidgetStateProperty.all(halfWhite),
-                  ),
-                  child: Text(
-                    'Upload',
-                    style: TextStyle(
-                      fontSize: 15.sp,
-                      fontFamily: 'Montserrat',
+                    onPressed: () {
+                      if (dateController.text.isEmpty ||
+                          titleController.text.isEmpty ||
+                          pickedImage == null) {
+                        setState(
+                          () {
+                            content = Text(
+                              textAlign: TextAlign.center,
+                              'Please fill all the required fields',
+                              style: TextStyle(
+                                  color: Colors.redAccent,
+                                  fontSize: 20.sp,
+                                  fontFamily: 'Montserrat'),
+                            );
+                          },
+                        );
+                      } else {
+                        UploadPicture(
+                            dateController.text, titleController.text);
+                      }
+
+                      setState(() {
+                        buttonContent =
+                            CircularProgressIndicator(color: golden);
+                      });
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(darkPurple),
+                      foregroundColor: WidgetStateProperty.all(halfWhite),
                     ),
-                  ),
-                ),
+                    child: buttonContent),
                 content
               ],
             ),

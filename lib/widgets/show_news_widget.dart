@@ -84,8 +84,7 @@ class ShowNewsWidget extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
                   decoration: BoxDecoration(
-                      color: const Color.fromRGBO(255, 199, 39, 1),
-                      borderRadius: BorderRadius.circular(2.r)),
+                      color: golden, borderRadius: BorderRadius.circular(2.r)),
                   child: Text(
                     newsData[index].date,
                     style: TextStyle(

@@ -22,6 +22,14 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
         TextStyle(color: darkPurple, fontSize: 20.sp, fontFamily: 'Montserrat'),
   );
 
+  Widget buttonContent = Text(
+    'Upload',
+    style: TextStyle(
+      fontSize: 15.sp,
+      fontFamily: 'Montserrat',
+    ),
+  );
+
   void UploadResult(String date, String title, String downloadLink) async {
     try {
       final url = Uri.https('fyp-demo-futter-default-rtdb.firebaseio.com',
@@ -37,6 +45,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          backgroundColor: halfWhite,
           content: Column(
             children: [
               Text(
@@ -45,16 +54,16 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                 style: TextStyle(
                     color: darkPurple,
                     fontFamily: 'Montserrat',
-                    fontSize: 20.sp),
+                    fontSize: 25.sp),
               ),
               Image.asset(
                 'assets/images/success.gif',
-                height: 50.h,
+                height: 100.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: const Duration(seconds: 2),
+          duration: const Duration(seconds: 3),
         ),
       );
 
@@ -63,6 +72,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
       print(error);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          backgroundColor: halfWhite,
           content: Column(
             children: [
               Text(
@@ -71,16 +81,16 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                 style: TextStyle(
                     color: Colors.red,
                     fontFamily: 'Montserrat',
-                    fontSize: 20.sp),
+                    fontSize: 25.sp),
               ),
               Image.asset(
                 'assets/images/fail.gif',
-                height: 50.h,
+                height: 100.h,
                 fit: BoxFit.cover,
               ),
             ],
           ),
-          duration: const Duration(seconds: 2),
+          duration: const Duration(seconds: 3),
         ),
       );
     }
@@ -130,39 +140,36 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                     obscureText: false),
                 SizedBox(height: 10.h),
                 ElevatedButton(
-                  onPressed: () {
-                    if (dateController.text.isEmpty ||
-                        titleController.text.isEmpty ||
-                        downloadLinkController.text.isEmpty) {
-                      setState(
-                        () {
-                          content = Text(
-                            textAlign: TextAlign.center,
-                            'Please fill all the required fields',
-                            style: TextStyle(
-                                color: Colors.redAccent,
-                                fontSize: 20.sp,
-                                fontFamily: 'Montserrat'),
-                          );
-                        },
-                      );
-                    } else {
-                      UploadResult(dateController.text, titleController.text,
-                          downloadLinkController.text);
-                    }
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(darkPurple),
-                    foregroundColor: WidgetStateProperty.all(halfWhite),
-                  ),
-                  child: Text(
-                    'Upload',
-                    style: TextStyle(
-                      fontSize: 15.sp,
-                      fontFamily: 'Montserrat',
+                    onPressed: () {
+                      if (dateController.text.isEmpty ||
+                          titleController.text.isEmpty ||
+                          downloadLinkController.text.isEmpty) {
+                        setState(
+                          () {
+                            content = Text(
+                              textAlign: TextAlign.center,
+                              'Please fill all the required fields',
+                              style: TextStyle(
+                                  color: Colors.redAccent,
+                                  fontSize: 20.sp,
+                                  fontFamily: 'Montserrat'),
+                            );
+                          },
+                        );
+                      } else {
+                        UploadResult(dateController.text, titleController.text,
+                            downloadLinkController.text);
+                      }
+                      setState(() {
+                        buttonContent =
+                            CircularProgressIndicator(color: golden);
+                      });
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(darkPurple),
+                      foregroundColor: WidgetStateProperty.all(halfWhite),
                     ),
-                  ),
-                ),
+                    child: buttonContent),
                 content
               ],
             ),

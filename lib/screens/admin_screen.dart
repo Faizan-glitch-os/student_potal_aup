@@ -142,9 +142,10 @@ class _AdminScreenState extends State<AdminScreen> {
                   onPressed: () {
                     print(adminNameController.text);
                     print(passwordController.text);
-                    if (adminNameController.text == 'admin' &&
-                        passwordController.text == 'admin') {
+                    if (adminNameController.text == 'admin1' &&
+                        passwordController.text == 'admin2') {
                       Succes();
+                      FocusScope.of(context).unfocus();
                     } else {
                       Fail();
                     }
