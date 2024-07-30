@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: halfWhite,
       splash:
           Lottie.asset('assets/splashScreen/Animation - 1718877457625.json'),
-      nextScreen: MainScreen(),
+      nextScreen: const MainScreen(),
       duration: 3000,
       splashIconSize: ScreenUtil().screenWidth,
       splashTransition: SplashTransition.slideTransition,

@@ -11,7 +11,7 @@ import '../widgets/selection_widget.dart';
 import 'notifications_screen.dart';
 
 class MainScreen extends StatelessWidget {
-  MainScreen({super.key});
+  const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,14 +59,14 @@ class MainScreen extends StatelessWidget {
                   text: 'Notifications',
                   image: 'assets/images/notifications.gif',
                   navigate: () {
-                    NavigateToScreen(NotificationsScreen());
+                    NavigateToScreen(const NotificationsScreen());
                   },
                 ),
                 SelectionWidget(
                   text: 'Scholarships',
                   image: 'assets/images/scholarship.gif',
                   navigate: () {
-                    NavigateToScreen(ScholarshipScreen());
+                    NavigateToScreen(const ScholarshipScreen());
                   },
                 ),
               ],
@@ -78,7 +78,7 @@ class MainScreen extends StatelessWidget {
                   text: '     Results     ',
                   image: 'assets/images/results.gif',
                   navigate: () {
-                    NavigateToScreen(ResultsScreen());
+                    NavigateToScreen(const ResultsScreen());
                   },
                 ),
                 const OutlineWidget(),

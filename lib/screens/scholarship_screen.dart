@@ -11,7 +11,7 @@ import '../data_model.dart';
 import '../widgets/show_news_widget.dart';
 
 class ScholarshipScreen extends StatefulWidget {
-  ScholarshipScreen({super.key});
+  const ScholarshipScreen({super.key});
 
   @override
   State<ScholarshipScreen> createState() => _ScholarshipScreenState();
@@ -62,7 +62,7 @@ class _ScholarshipScreenState extends State<ScholarshipScreen> {
         future: loadedNews,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
                 color: golden,
               ),

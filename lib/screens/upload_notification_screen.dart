@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -230,7 +229,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
                             dateController.text, titleController.text);
                       }
                       setState(() {
-                        buttonContent = CircularProgressIndicator(
+                        buttonContent = const CircularProgressIndicator(
                           color: golden,
                         );
                       });

@@ -227,7 +227,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
 
                       setState(() {
                         buttonContent =
-                            CircularProgressIndicator(color: golden);
+                            const CircularProgressIndicator(color: golden);
                       });
                     },
                     style: ButtonStyle(

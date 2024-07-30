@@ -4,9 +4,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:student_potal_aup/screens/admin_screen.dart';
-import 'package:student_potal_aup/screens/bscs_screen.dart';
-import 'package:student_potal_aup/screens/bsit_screen.dart';
 
 import 'package:student_potal_aup/screens/splash_screen.dart';
 

@@ -162,7 +162,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                       }
                       setState(() {
                         buttonContent =
-                            CircularProgressIndicator(color: golden);
+                            const CircularProgressIndicator(color: golden);
                       });
                     },
                     style: ButtonStyle(

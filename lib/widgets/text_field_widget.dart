@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:student_potal_aup/colors.dart';
 
 class TextFieldWidget extends StatefulWidget {
-  TextFieldWidget({
+  const TextFieldWidget({
     super.key,
     required this.textController,
     required this.label,

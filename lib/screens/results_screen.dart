@@ -11,7 +11,7 @@ import 'package:student_potal_aup/widgets/show_results_widget.dart';
 import '../data_model.dart';
 
 class ResultsScreen extends StatefulWidget {
-  ResultsScreen({super.key});
+  const ResultsScreen({super.key});
 
   @override
   State<ResultsScreen> createState() => _ResultsScreenState();
@@ -62,7 +62,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
         future: loadedNews,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
                 color: golden,
               ),

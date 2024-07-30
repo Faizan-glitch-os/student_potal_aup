@@ -11,7 +11,7 @@ import '../data_model.dart';
 import '../widgets/show_news_widget.dart';
 
 class NotificationsScreen extends StatefulWidget {
-  NotificationsScreen({super.key});
+  const NotificationsScreen({super.key});
 
   @override
   State<NotificationsScreen> createState() => _NotificationsScreenState();
@@ -62,7 +62,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         future: loadedNews,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
                 color: golden,
               ),
