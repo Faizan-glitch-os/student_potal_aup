@@ -7,6 +7,7 @@ import 'package:student_potal_aup/screens/results_screen.dart';
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
 import 'package:student_potal_aup/widgets/outline_widget.dart';
 import 'package:student_potal_aup/colors.dart';
+import '../widgets/download_receipt_widget.dart';
 import '../widgets/selection_widget.dart';
 import 'notifications_screen.dart';
 
@@ -83,6 +84,15 @@ class MainScreen extends StatelessWidget {
                 ),
                 const OutlineWidget(),
               ],
+            ),
+            const DownloadReceiptWidget(
+              text: 'Download Renewal Slip',
+              address: 'http://175.107.62.210:8080/Admissions/FeeRenewal',
+            ),
+            SizedBox(height: 5.h),
+            const DownloadReceiptWidget(
+              text: 'Download Deposit Slip',
+              address: 'http://portal.aup.edu.pk/Student/FeeReceipt',
             ),
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.center,
