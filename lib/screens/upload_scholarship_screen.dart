@@ -173,8 +173,8 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                   textAlign: TextAlign.center,
                   'Uploading Scholarship',
                   style: TextStyle(
-                    fontSize: 40.sp,
-                    color: golden,
+                    fontSize: 30.sp,
+                    color: darkBlue,
                     fontFamily: 'Montserrat',
                   ),
                 ),
@@ -182,7 +182,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                 InkWell(
                   onTap: PickPicture,
                   child: Container(
-                      height: 300.h,
+                      height: 350.h,
                       width: ScreenUtil().screenWidth,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.r),
@@ -221,14 +221,13 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                           },
                         );
                       } else {
+                        setState(() {
+                          buttonContent =
+                              const CircularProgressIndicator(color: golden);
+                        });
                         UploadPicture(
                             dateController.text, titleController.text);
                       }
-
-                      setState(() {
-                        buttonContent =
-                            const CircularProgressIndicator(color: golden);
-                      });
                     },
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(darkPurple),

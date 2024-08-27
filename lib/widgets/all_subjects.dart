@@ -29,28 +29,28 @@ class AllSubjects extends StatelessWidget {
               semester,
               style: TextStyle(
                 color: golden,
-                fontSize: 22.sp,
+                fontSize: 18.sp,
                 fontFamily: 'Montserrat',
               ),
             ),
-            SizedBox(height: 20.h),
+            SizedBox(height: 16.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Code',
                   style: TextStyle(
-                      color: golden, fontSize: 18.sp, fontFamily: 'Montserrat'),
+                      color: golden, fontSize: 14.sp, fontFamily: 'Montserrat'),
                 ),
                 Text(
                   'Subject',
                   style: TextStyle(
-                      color: golden, fontSize: 18.sp, fontFamily: 'Montserrat'),
+                      color: golden, fontSize: 14.sp, fontFamily: 'Montserrat'),
                 ),
                 Text(
                   'Download',
                   style: TextStyle(
-                      color: golden, fontSize: 18.sp, fontFamily: 'Montserrat'),
+                      color: golden, fontSize: 14.sp, fontFamily: 'Montserrat'),
                 ),
               ],
             ),
@@ -58,38 +58,41 @@ class AllSubjects extends StatelessWidget {
               color: golden,
             ),
             ...subjects.map(
-              (item) => Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '${item.code}',
-                    style: TextStyle(
-                      color: halfWhite,
-                      fontSize: 15.sp,
-                      fontFamily: 'Montserrat',
+              (item) => Padding(
+                padding: EdgeInsets.all(8.r),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '${item.code}',
+                      style: TextStyle(
+                        color: halfWhite,
+                        fontSize: 11.sp,
+                        fontFamily: 'Montserrat',
+                      ),
                     ),
-                  ),
-                  Text(
-                    '${item.subject}',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: halfWhite,
-                      fontSize: 15.sp,
-                      fontFamily: 'Montserrat',
+                    Text(
+                      '${item.subject}',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: halfWhite,
+                        fontSize: 11.sp,
+                        fontFamily: 'Montserrat',
+                      ),
                     ),
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      Uri url = Uri.parse(item.download);
-                      launchUrl(url);
-                    },
-                    icon: Icon(
-                      Icons.download,
-                      size: 20.r,
-                      color: Colors.greenAccent,
-                    ),
-                  )
-                ],
+                    IconButton(
+                      onPressed: () {
+                        Uri url = Uri.parse(item.download);
+                        launchUrl(url);
+                      },
+                      icon: Icon(
+                        Icons.download,
+                        size: 16.r,
+                        color: Colors.greenAccent,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ],

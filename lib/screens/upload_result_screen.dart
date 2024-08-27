@@ -115,8 +115,8 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                   textAlign: TextAlign.center,
                   'Uploading Result',
                   style: TextStyle(
-                    fontSize: 40.sp,
-                    color: golden,
+                    fontSize: 30.sp,
+                    color: darkBlue,
                     fontFamily: 'Montserrat',
                   ),
                 ),
@@ -157,13 +157,13 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                           },
                         );
                       } else {
+                        setState(() {
+                          buttonContent =
+                              const CircularProgressIndicator(color: golden);
+                        });
                         UploadResult(dateController.text, titleController.text,
                             downloadLinkController.text);
                       }
-                      setState(() {
-                        buttonContent =
-                            const CircularProgressIndicator(color: golden);
-                      });
                     },
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(darkPurple),

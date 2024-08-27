@@ -25,11 +25,15 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          theme: ThemeData(
-            useMaterial3: true,
+        return MediaQuery(
+          data:
+              MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+          child: MaterialApp(
+            theme: ThemeData(
+              useMaterial3: true,
+            ),
+            home: const SplashScreen(),
           ),
-          home: const SplashScreen(),
         );
       },
     );

@@ -162,85 +162,87 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
       );
     }
 
-    return Scaffold(
-      backgroundColor: halfWhite,
-      body: Center(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(10.r),
-            child: Column(
-              children: [
-                Text(
-                  textAlign: TextAlign.center,
-                  'Uploading Notification',
-                  style: TextStyle(
-                    fontSize: 40.sp,
-                    color: golden,
-                    fontFamily: 'Montserrat',
-                  ),
-                ),
-                SizedBox(height: 30.h),
-                InkWell(
-                  onTap: PickPicture,
-                  child: Container(
-                      height: 300.h,
-                      width: ScreenUtil().screenWidth,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.r),
-                        border: Border.all(width: 1, color: golden),
-                      ),
-                      child: pickContent),
-                ),
-                SizedBox(height: 10.h),
-                TextFieldWidget(
-                    textController: dateController,
-                    label: 'Date',
-                    keyboardType: TextInputType.text,
-                    obscureText: false),
-                SizedBox(height: 10.h),
-                TextFieldWidget(
-                    textController: titleController,
-                    label: 'Title',
-                    keyboardType: TextInputType.text,
-                    obscureText: false),
-                SizedBox(height: 10.h),
-                ElevatedButton(
-                    onPressed: () {
-                      print(dateController.text);
-                      print(titleController.text);
-                      print(pickedImage);
-                      if (dateController.text.isEmpty ||
-                          titleController.text.isEmpty ||
-                          pickedImage == null) {
-                        setState(
-                          () {
-                            content = Text(
-                              textAlign: TextAlign.center,
-                              'Please fill all the required fields',
-                              style: TextStyle(
-                                  color: Colors.redAccent,
-                                  fontSize: 20.sp,
-                                  fontFamily: 'Montserrat'),
-                            );
-                          },
-                        );
-                      } else {
-                        UploadPicture(
-                            dateController.text, titleController.text);
-                      }
-                      setState(() {
-                        buttonContent = const CircularProgressIndicator(
-                          color: golden,
-                        );
-                      });
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(darkPurple),
-                      foregroundColor: WidgetStateProperty.all(halfWhite),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: halfWhite,
+        body: Center(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.all(10.r),
+              child: Column(
+                children: [
+                  Text(
+                    textAlign: TextAlign.center,
+                    'Uploading Notification',
+                    style: TextStyle(
+                      fontSize: 30.sp,
+                      color: darkBlue,
+                      fontFamily: 'Montserrat',
                     ),
-                    child: buttonContent),
-                content
-              ],
+                  ),
+                  SizedBox(height: 30.h),
+                  InkWell(
+                    onTap: PickPicture,
+                    child: Container(
+                        height: 350.h,
+                        width: ScreenUtil().screenWidth,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.r),
+                          border: Border.all(width: 1, color: golden),
+                        ),
+                        child: pickContent),
+                  ),
+                  SizedBox(height: 10.h),
+                  TextFieldWidget(
+                      textController: dateController,
+                      label: 'Date',
+                      keyboardType: TextInputType.text,
+                      obscureText: false),
+                  SizedBox(height: 10.h),
+                  TextFieldWidget(
+                      textController: titleController,
+                      label: 'Title',
+                      keyboardType: TextInputType.text,
+                      obscureText: false),
+                  SizedBox(height: 10.h),
+                  ElevatedButton(
+                      onPressed: () {
+                        print(dateController.text);
+                        print(titleController.text);
+                        print(pickedImage);
+                        if (dateController.text.isEmpty ||
+                            titleController.text.isEmpty ||
+                            pickedImage == null) {
+                          setState(
+                            () {
+                              content = Text(
+                                textAlign: TextAlign.center,
+                                'Please fill all the required fields',
+                                style: TextStyle(
+                                    color: Colors.redAccent,
+                                    fontSize: 20.sp,
+                                    fontFamily: 'Montserrat'),
+                              );
+                            },
+                          );
+                        } else {
+                          setState(() {
+                            buttonContent = const CircularProgressIndicator(
+                              color: golden,
+                            );
+                          });
+                          UploadPicture(
+                              dateController.text, titleController.text);
+                        }
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(darkPurple),
+                        foregroundColor: WidgetStateProperty.all(halfWhite),
+                      ),
+                      child: buttonContent),
+                  content
+                ],
+              ),
             ),
           ),
         ),

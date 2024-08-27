@@ -47,7 +47,7 @@ class OutlineWidget extends StatelessWidget {
           Text(
             'Outlines',
             style: TextStyle(
-                fontSize: 20.sp,
+                fontSize: 18.sp,
                 color: golden,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.bold),

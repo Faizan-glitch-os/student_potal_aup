@@ -85,6 +85,7 @@ class ShowNewsWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: golden, borderRadius: BorderRadius.circular(2.r)),
                   child: Text(
+                    textScaler: TextScaler.noScaling,
                     newsData[index].date,
                     style: TextStyle(
                         color: Colors.white,

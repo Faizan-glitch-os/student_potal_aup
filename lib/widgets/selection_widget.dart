@@ -34,7 +34,7 @@ class SelectionWidget extends StatelessWidget {
             Text(
               text,
               style: TextStyle(
-                  fontSize: 20.sp,
+                  fontSize: 18.sp,
                   color: golden,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.bold),
