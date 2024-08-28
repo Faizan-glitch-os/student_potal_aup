@@ -45,6 +45,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          behavior: SnackBarBehavior.floating,
           backgroundColor: halfWhite,
           content: Column(
             children: [
@@ -72,6 +73,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
       print(error);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          behavior: SnackBarBehavior.floating,
           backgroundColor: halfWhite,
           content: Column(
             children: [

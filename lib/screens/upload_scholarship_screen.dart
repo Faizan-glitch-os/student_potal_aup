@@ -73,6 +73,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          behavior: SnackBarBehavior.floating,
           backgroundColor: halfWhite,
           content: Column(
             children: [
@@ -100,6 +101,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
       print(error);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          behavior: SnackBarBehavior.floating,
           backgroundColor: halfWhite,
           content: Column(
             children: [

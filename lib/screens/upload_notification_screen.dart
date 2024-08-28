@@ -74,6 +74,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          behavior: SnackBarBehavior.floating,
           backgroundColor: halfWhite,
           content: Column(
             children: [
@@ -101,6 +102,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
       print('catch block');
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          behavior: SnackBarBehavior.floating,
           backgroundColor: halfWhite,
           content: Column(
             children: [
