@@ -23,7 +23,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
   bool icon = true;
   Color iconColor = Colors.white;
 
-  void AddToFavorite() {
+  void addToFavorite() {
     icon = !icon;
     if (icon == true) {
       setState(() {
@@ -41,7 +41,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
     return IconButton(
       highlightColor: golden.withOpacity(.6),
       onPressed: () {
-        AddToFavorite();
+        addToFavorite();
       },
       icon: Icon(
         Icons.favorite,

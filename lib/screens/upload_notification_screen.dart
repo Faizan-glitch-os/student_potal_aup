@@ -37,7 +37,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
 
   File? pickedImage;
 
-  void PickPicture() async {
+  void pickPicture() async {
     final image = await ImagePicker()
         .pickImage(source: ImageSource.gallery, imageQuality: 80);
 
@@ -50,7 +50,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
     });
   }
 
-  void UploadPicture(String date, String title) async {
+  void uploadPicture(String date, String title) async {
     final storageRef = FirebaseStorage.instance
         .ref()
         .child('uploaded-notifications')
@@ -135,7 +135,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
     Widget pickContent = TextButton.icon(
       style: ButtonStyle(
           overlayColor: WidgetStateProperty.all(darkPurple.withOpacity(.2))),
-      onPressed: PickPicture,
+      onPressed: pickPicture,
       icon: Icon(
         Icons.photo,
         size: 30.r,
@@ -184,7 +184,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
                   ),
                   SizedBox(height: 30.h),
                   InkWell(
-                    onTap: PickPicture,
+                    onTap: pickPicture,
                     child: Container(
                         height: 350.h,
                         width: ScreenUtil().screenWidth,
@@ -233,7 +233,7 @@ class _UploadNotificationScreenState extends State<UploadNotificationScreen> {
                               color: golden,
                             );
                           });
-                          UploadPicture(
+                          uploadPicture(
                               dateController.text, titleController.text);
                         }
                       },

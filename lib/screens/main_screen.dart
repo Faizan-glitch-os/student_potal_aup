@@ -16,7 +16,7 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void NavigateToScreen(Widget screen) {
+    void navigateToScreen(Widget screen) {
       Navigator.push(
         context,
         PageRouteBuilder(
@@ -45,7 +45,7 @@ class MainScreen extends StatelessWidget {
             IconButton(
               highlightColor: golden.withOpacity(.2),
               onPressed: () {
-                NavigateToScreen(const AdminScreen());
+                navigateToScreen(const AdminScreen());
               },
               icon: Icon(
                 Icons.admin_panel_settings,
@@ -60,14 +60,14 @@ class MainScreen extends StatelessWidget {
                   text: 'Notifications',
                   image: 'assets/images/notifications.gif',
                   navigate: () {
-                    NavigateToScreen(const NotificationsScreen());
+                    navigateToScreen(const NotificationsScreen());
                   },
                 ),
                 SelectionWidget(
                   text: 'Scholarships',
                   image: 'assets/images/scholarship.gif',
                   navigate: () {
-                    NavigateToScreen(const ScholarshipScreen());
+                    navigateToScreen(const ScholarshipScreen());
                   },
                 ),
               ],
@@ -79,7 +79,7 @@ class MainScreen extends StatelessWidget {
                   text: '     Results     ',
                   image: 'assets/images/results.gif',
                   navigate: () {
-                    NavigateToScreen(const ResultsScreen());
+                    navigateToScreen(const ResultsScreen());
                   },
                 ),
                 const OutlineWidget(),

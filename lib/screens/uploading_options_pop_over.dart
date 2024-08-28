@@ -10,7 +10,7 @@ class UploadingOptionsPopOver extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void NavigateToScreen(Widget screen) {
+    void navigateToScreen(Widget screen) {
       Navigator.push(
         context,
         PageRouteBuilder(
@@ -47,21 +47,21 @@ class UploadingOptionsPopOver extends StatelessWidget {
               horizontalPadding: 20,
               label: 'Latest Notification',
               navigateScreen: () {
-                NavigateToScreen(const UploadNotificationScreen());
+                navigateToScreen(const UploadNotificationScreen());
               }),
           SizedBox(height: 5.h),
           UploadingButtonWidget(
               horizontalPadding: 20,
               label: 'Scholarship',
               navigateScreen: () {
-                NavigateToScreen(const UploadScholarshipScreen());
+                navigateToScreen(const UploadScholarshipScreen());
               }),
           SizedBox(height: 5.h),
           UploadingButtonWidget(
             horizontalPadding: 20,
             label: 'Result',
             navigateScreen: () {
-              NavigateToScreen(const UploadResultScreen());
+              navigateToScreen(const UploadResultScreen());
             },
           ),
         ],

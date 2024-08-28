@@ -14,7 +14,7 @@ class OutlineWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void NavigateToScreen(Widget screen) {
+    void navigateToScreen(Widget screen) {
       Navigator.push(
         context,
         PageRouteBuilder(
@@ -57,14 +57,14 @@ class OutlineWidget extends StatelessWidget {
             horizontalPadding: 1,
             label: 'BSCS Course',
             navigateScreen: () {
-              NavigateToScreen(const BscsScreen());
+              navigateToScreen(const BscsScreen());
             },
           ),
           UploadingButtonWidget(
             horizontalPadding: 1,
             label: 'BSIT Course',
             navigateScreen: () {
-              NavigateToScreen(const BsitScreen());
+              navigateToScreen(const BsitScreen());
             },
           ),
         ],

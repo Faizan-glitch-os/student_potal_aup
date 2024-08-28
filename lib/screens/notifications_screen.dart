@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:http/http.dart' as http;
-import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 
 import 'package:student_potal_aup/colors.dart';
 
@@ -25,10 +24,10 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    loadedNews = LoadNews();
+    loadedNews = loadNews();
   }
 
-  Future<List<Notifications>> LoadNews() async {
+  Future<List<Notifications>> loadNews() async {
     final url = Uri.https('fyp-demo-futter-default-rtdb.firebaseio.com',
         'uploaded-notifications.json');
 

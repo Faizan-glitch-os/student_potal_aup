@@ -37,7 +37,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
 
   File? pickedImage;
 
-  void PickPicture() async {
+  void pickPicture() async {
     final image = await ImagePicker()
         .pickImage(source: ImageSource.gallery, imageQuality: 80);
 
@@ -50,7 +50,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
     });
   }
 
-  void UploadPicture(String date, String title) async {
+  void uploadPicture(String date, String title) async {
     final storageRef = FirebaseStorage.instance
         .ref()
         .child('uploaded-scholarships')
@@ -134,7 +134,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
     Widget pickContent = TextButton.icon(
       style: ButtonStyle(
           overlayColor: WidgetStateProperty.all(darkPurple.withOpacity(.2))),
-      onPressed: PickPicture,
+      onPressed: pickPicture,
       icon: Icon(
         Icons.photo,
         size: 30.r,
@@ -182,7 +182,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                 ),
                 SizedBox(height: 30.h),
                 InkWell(
-                  onTap: PickPicture,
+                  onTap: pickPicture,
                   child: Container(
                       height: 350.h,
                       width: ScreenUtil().screenWidth,
@@ -227,7 +227,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
                           buttonContent =
                               const CircularProgressIndicator(color: golden);
                         });
-                        UploadPicture(
+                        uploadPicture(
                             dateController.text, titleController.text);
                       }
                     },

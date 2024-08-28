@@ -30,7 +30,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
     ),
   );
 
-  void UploadResult(String date, String title, String downloadLink) async {
+  void uploadResult(String date, String title, String downloadLink) async {
     try {
       final url = Uri.https('fyp-demo-futter-default-rtdb.firebaseio.com',
           'uploaded-results.json');
@@ -163,7 +163,7 @@ class _UploadResultScreenState extends State<UploadResultScreen> {
                           buttonContent =
                               const CircularProgressIndicator(color: golden);
                         });
-                        UploadResult(dateController.text, titleController.text,
+                        uploadResult(dateController.text, titleController.text,
                             downloadLinkController.text);
                       }
                     },

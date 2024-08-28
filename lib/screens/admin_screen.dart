@@ -24,7 +24,7 @@ class _AdminScreenState extends State<AdminScreen> {
         TextStyle(color: darkPurple, fontSize: 20.sp, fontFamily: 'Montserrat'),
   );
 
-  void NavigateToScreen(Widget screen) {
+  void navigateToScreen(Widget screen) {
     Navigator.push(
       context,
       PageRouteBuilder(
@@ -49,7 +49,7 @@ class _AdminScreenState extends State<AdminScreen> {
     TextEditingController adminNameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
-    void Succes() {
+    void succes() {
       setState(() {
         content = Column(
           children: [
@@ -67,21 +67,21 @@ class _AdminScreenState extends State<AdminScreen> {
                 horizontalPadding: 20,
                 label: 'Latest Notification',
                 navigateScreen: () {
-                  NavigateToScreen(const UploadNotificationScreen());
+                  navigateToScreen(const UploadNotificationScreen());
                 }),
             SizedBox(height: 5.h),
             UploadingButtonWidget(
                 horizontalPadding: 20,
                 label: 'Scholarship',
                 navigateScreen: () {
-                  NavigateToScreen(const UploadScholarshipScreen());
+                  navigateToScreen(const UploadScholarshipScreen());
                 }),
             SizedBox(height: 5.h),
             UploadingButtonWidget(
               horizontalPadding: 20,
               label: 'Result',
               navigateScreen: () {
-                NavigateToScreen(const UploadResultScreen());
+                navigateToScreen(const UploadResultScreen());
               },
             ),
           ],
@@ -89,7 +89,7 @@ class _AdminScreenState extends State<AdminScreen> {
       });
     }
 
-    void Fail() {
+    void fail() {
       setState(
         () {
           content = Container(
@@ -144,10 +144,10 @@ class _AdminScreenState extends State<AdminScreen> {
                     print(passwordController.text);
                     if (adminNameController.text == 'admin1' &&
                         passwordController.text == 'admin2') {
-                      Succes();
+                      succes();
                       FocusScope.of(context).unfocus();
                     } else {
-                      Fail();
+                      fail();
                     }
                   },
                   child: Padding(

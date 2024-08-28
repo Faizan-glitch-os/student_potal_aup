@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 
 import 'package:student_potal_aup/colors.dart';
 
@@ -20,7 +19,7 @@ class ShowNewsWidget extends StatefulWidget {
 class _ShowNewsWidgetState extends State<ShowNewsWidget> {
   @override
   Widget build(BuildContext context) {
-    void ShowImage(int index) {
+    void showImage(int index) {
       showModalBottomSheet(
         enableDrag: false,
         barrierColor: Colors.black12.withOpacity(.6),
@@ -130,7 +129,7 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
             splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
             borderRadius: BorderRadius.circular(10.r),
             onTap: () {
-              ShowImage(index);
+              showImage(index);
             },
             child: IntrinsicHeight(
               child: Container(

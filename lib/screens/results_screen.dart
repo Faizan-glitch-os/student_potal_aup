@@ -24,10 +24,10 @@ class _ResultsScreenState extends State<ResultsScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    loadedNews = LoadNews();
+    loadedNews = loadNews();
   }
 
-  Future<List<Notifications>> LoadNews() async {
+  Future<List<Notifications>> loadNews() async {
     final url = Uri.https(
         'fyp-demo-futter-default-rtdb.firebaseio.com', 'uploaded-results.json');
 
