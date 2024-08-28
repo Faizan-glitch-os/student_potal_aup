@@ -50,7 +50,7 @@ class MainScreen extends StatelessWidget {
               icon: Icon(
                 Icons.admin_panel_settings,
                 size: 80.r,
-                color: darkGrey,
+                color: darkPurple,
               ),
             ),
             Row(
