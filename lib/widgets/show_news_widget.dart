@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+
 import 'package:student_potal_aup/colors.dart';
 
-class ShowNewsWidget extends StatelessWidget {
+class ShowNewsWidget extends StatefulWidget {
   const ShowNewsWidget({
     super.key,
     required this.newsData,
@@ -11,6 +13,11 @@ class ShowNewsWidget extends StatelessWidget {
 
   final List newsData;
 
+  @override
+  State<ShowNewsWidget> createState() => _ShowNewsWidgetState();
+}
+
+class _ShowNewsWidgetState extends State<ShowNewsWidget> {
   @override
   Widget build(BuildContext context) {
     void ShowImage(int index) {
@@ -32,7 +39,7 @@ class ShowNewsWidget extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(10.r),
                 child: Image.network(
-                  newsData[index].image,
+                  widget.newsData[index].image,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -118,7 +125,7 @@ class ShowNewsWidget extends StatelessWidget {
         physics: const FixedExtentScrollPhysics(),
         itemExtent: 300.h,
         childDelegate: ListWheelChildBuilderDelegate(
-          childCount: newsData.length,
+          childCount: widget.newsData.length,
           builder: (context, index) => InkWell(
             splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
             borderRadius: BorderRadius.circular(10.r),
@@ -165,7 +172,7 @@ class ShowNewsWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(2.r)),
                       child: Text(
                         textScaler: TextScaler.noScaling,
-                        newsData[index].date,
+                        widget.newsData[index].date,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.sp,
@@ -181,7 +188,7 @@ class ShowNewsWidget extends StatelessWidget {
                     // SizedBox(height: 20.h),
 
                     Text(
-                      newsData[index].title,
+                      widget.newsData[index].title,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.sp,
