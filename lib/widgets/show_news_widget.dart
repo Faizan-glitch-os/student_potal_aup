@@ -42,77 +42,157 @@ class ShowNewsWidget extends StatelessWidget {
       );
     }
 
-    return ListView.builder(
-      itemCount: newsData.length,
-      itemBuilder: (context, index) => InkWell(
-        splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
-        borderRadius: BorderRadius.circular(10.r),
-        onTap: () {
-          ShowImage(index);
-        },
-        child: IntrinsicHeight(
-          child: Container(
-            width: ScreenUtil().screenWidth,
-            margin: EdgeInsets.all(10.r),
-            padding: EdgeInsets.all(20.r),
-            decoration: BoxDecoration(
-                color: darkPurple,
-                borderRadius: BorderRadius.circular(10.r),
-                border: Border.all(
-                    color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5.w)
-                // boxShadow: [
-                //   BoxShadow(
-                //     color: Colors.white38,
-                //     spreadRadius: 10,
-                //     blurRadius: 5,
-                //     offset: Offset(0, 4),
-                //   ),
-                // ],
-                // gradient: const LinearGradient(
-                //   begin: Alignment.topCenter,
-                //   end: Alignment.bottomCenter,
-                //   colors: [
-                //     Color.fromRGBO(69, 90, 100, 1),
-                //     Color.fromRGBO(35, 41, 48, 1.0),
-                //   ],
-                // ),
-                ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
-                  decoration: BoxDecoration(
-                      color: golden, borderRadius: BorderRadius.circular(2.r)),
-                  child: Text(
-                    textScaler: TextScaler.noScaling,
-                    newsData[index].date,
-                    style: TextStyle(
+    // return ListView.builder(
+    //   itemCount: newsData.length,
+    //   itemBuilder: (context, index) => InkWell(
+    //     splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
+    //     borderRadius: BorderRadius.circular(10.r),
+    //     onTap: () {
+    //       ShowImage(index);
+    //     },
+    //     child: IntrinsicHeight(
+    //       child: Container(
+    //         width: ScreenUtil().screenWidth,
+    //         margin: EdgeInsets.all(10.r),
+    //         padding: EdgeInsets.all(20.r),
+    //         decoration: BoxDecoration(
+    //             color: darkPurple,
+    //             borderRadius: BorderRadius.circular(10.r),
+    //             border: Border.all(
+    //                 color: const Color.fromRGBO(255, 199, 39, 1), width: 1.5.w)
+    //             // boxShadow: [
+    //             //   BoxShadow(
+    //             //     color: Colors.white38,
+    //             //     spreadRadius: 10,
+    //             //     blurRadius: 5,
+    //             //     offset: Offset(0, 4),
+    //             //   ),
+    //             // ],
+    //             // gradient: const LinearGradient(
+    //             //   begin: Alignment.topCenter,
+    //             //   end: Alignment.bottomCenter,
+    //             //   colors: [
+    //             //     Color.fromRGBO(69, 90, 100, 1),
+    //             //     Color.fromRGBO(35, 41, 48, 1.0),
+    //             //   ],
+    //             // ),
+    //             ),
+    //         child: Column(
+    //           crossAxisAlignment: CrossAxisAlignment.start,
+    //           children: [
+    //             Container(
+    //               padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
+    //               decoration: BoxDecoration(
+    //                   color: golden, borderRadius: BorderRadius.circular(2.r)),
+    //               child: Text(
+    //                 textScaler: TextScaler.noScaling,
+    //                 newsData[index].date,
+    //                 style: TextStyle(
+    //                     color: Colors.white,
+    //                     fontSize: 15.sp,
+    //                     fontFamily: 'Montserrat',
+    //                     fontWeight: FontWeight.bold),
+    //               ),
+    //             ),
+    //             // const Spacer(),
+    //             // FavoriteButton(
+    //             //     date: newsData[index].date,
+    //             //     title: newsData[index].title,
+    //             //     image: newsData[index].image),
+    //             SizedBox(height: 20.h),
+    //             Text(
+    //               newsData[index].title,
+    //               style: TextStyle(
+    //                 color: Colors.white,
+    //                 fontSize: 20.sp,
+    //                 fontFamily: 'Montserrat',
+    //               ),
+    //             ),
+    //           ],
+    //         ),
+    //       ),
+    //     ),
+    //   ),
+    // );
+    return ListWheelScrollView.useDelegate(
+        physics: const FixedExtentScrollPhysics(),
+        itemExtent: 300.h,
+        childDelegate: ListWheelChildBuilderDelegate(
+          childCount: newsData.length,
+          builder: (context, index) => InkWell(
+            splashColor: const Color.fromRGBO(35, 41, 48, 1.0),
+            borderRadius: BorderRadius.circular(10.r),
+            onTap: () {
+              ShowImage(index);
+            },
+            child: IntrinsicHeight(
+              child: Container(
+                width: ScreenUtil().screenWidth,
+                margin: EdgeInsets.all(10.r),
+                padding: EdgeInsets.all(20.r),
+                decoration: BoxDecoration(
+                    color: darkPurple,
+                    borderRadius: BorderRadius.circular(10.r),
+                    border: Border.all(
+                        color: const Color.fromRGBO(255, 199, 39, 1),
+                        width: 1.5.w)
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Colors.white38,
+                    //     spreadRadius: 10,
+                    //     blurRadius: 5,
+                    //     offset: Offset(0, 4),
+                    //   ),
+                    // ],
+                    // gradient: const LinearGradient(
+                    //   begin: Alignment.topCenter,
+                    //   end: Alignment.bottomCenter,
+                    //   colors: [
+                    //     Color.fromRGBO(69, 90, 100, 1),
+                    //     Color.fromRGBO(35, 41, 48, 1.0),
+                    //   ],
+                    // ),
+                    ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
+                      decoration: BoxDecoration(
+                          color: golden,
+                          borderRadius: BorderRadius.circular(2.r)),
+                      child: Text(
+                        textScaler: TextScaler.noScaling,
+                        newsData[index].date,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.sp,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    // const Spacer(),
+                    // FavoriteButton(
+                    //     date: newsData[index].date,
+                    //     title: newsData[index].title,
+                    //     image: newsData[index].image),
+                    // SizedBox(height: 20.h),
+
+                    Text(
+                      newsData[index].title,
+                      style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15.sp,
+                        fontSize: 20.sp,
                         fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold),
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
-                // const Spacer(),
-                // FavoriteButton(
-                //     date: newsData[index].date,
-                //     title: newsData[index].title,
-                //     image: newsData[index].image),
-                SizedBox(height: 20.h),
-                Text(
-                  newsData[index].title,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.sp,
-                    fontFamily: 'Montserrat',
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
