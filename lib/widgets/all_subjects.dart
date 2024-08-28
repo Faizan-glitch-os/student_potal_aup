@@ -76,7 +76,7 @@ class AllSubjects extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: halfWhite,
-                        fontSize: 11.sp,
+                        fontSize: 14.sp,
                         fontFamily: 'Montserrat',
                       ),
                     ),

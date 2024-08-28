@@ -24,7 +24,7 @@ class DownloadReceiptWidget extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(10.r),
         decoration: BoxDecoration(
-          gradient: const LinearGradient(colors: [darkGrey, darkBlue]),
+          color: darkPurple,
           border: Border.all(color: golden),
           borderRadius: BorderRadius.circular(5.r),
         ),
