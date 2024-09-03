@@ -39,7 +39,7 @@ class _UploadScholarshipScreenState extends State<UploadScholarshipScreen> {
 
   void pickPicture() async {
     final image = await ImagePicker()
-        .pickImage(source: ImageSource.gallery, imageQuality: 80);
+        .pickImage(source: ImageSource.gallery, imageQuality: 100);
 
     if (image == null) {
       return null;
