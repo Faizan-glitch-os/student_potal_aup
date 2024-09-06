@@ -636,226 +636,226 @@ List<CourseOutline> it1 = [
       // semester: '1',
       code: 'MT-301',
       subject: 'Calculus\n&\nAnalytical Geometry',
-      download: 'assets/docs/Calculus & analytical Geom.doc'),
+      download: 'Calculus-&-analytical-Geom.doc'),
   CourseOutline(
       // semester: '1',
       code: 'EG-301',
       subject: 'English Composition\n&\nComprehension',
-      download: 'assets/docs/English Com-comprehension.docx'),
+      download: 'English-Com-comprehension.docx'),
   CourseOutline(
       // semester: '1',
       code: 'MG-301',
       subject: 'Financial\nAccounting',
-      download: 'assets/docs/Finalcial Accounting.doc'),
+      download: 'Finalcial-Accounting.doc'),
   CourseOutline(
       // semester: '1',
       code: 'IT-301',
       subject: 'Introduction\nto\nComputing',
-      download: 'assets/docs/Introduction to Computering.doc'),
+      download: 'Introduction-to-Computering.doc'),
   CourseOutline(
       // semester: '1',
       code: 'IT-302',
       subject: 'Programming\nFundamentals',
-      download: 'assets/docs/Programming Fundamentals.doc'),
+      download: 'Programming-Fundamentals.doc'),
   CourseOutline(
       // semester: '1',
       code: 'PK-301',
       subject: 'Pakistan\nStudies',
-      download: 'assets/docs/Pakistan study.doc'),
+      download: 'Pakistan-study.doc'),
 ];
 List<CourseOutline> it2 = [
   CourseOutline(
       // semester: '2',
       code: 'MT-311',
       subject: 'Differential\nEquations',
-      download: 'assets/docs/Differentail Equations.doc'),
+      download: 'Differentail-Equations.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-312',
       subject: 'Discrete\nStructures',
-      download: 'assets/docs/Discrete Structures.doc'),
+      download: 'Discrete-Structures.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-314',
       subject: 'E-Commerce',
-      download: 'assets/docs/E-Commerce.doc'),
+      download: 'E-Commerce.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-313',
       subject: 'Introduction\nto IT',
-      download: 'assets/docs/Intro to IT.doc'),
+      download: 'Intro-to-IT.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-311',
       subject: 'Object Oriented\nParadigm',
-      download: 'assets/docs/Object Oriented Paradigm.doc'),
+      download: 'Object-Oriented-Paradigm.doc'),
   CourseOutline(
       // semester: '2',
       code: 'EG-311',
       subject: 'Technical &\nBusiness Writing',
-      download: 'assets/docs/Technical & Business Writing.doc'),
+      download: 'Technical-&-Business-Writing.doc'),
 ];
 List<CourseOutline> it3 = [
   CourseOutline(
       // semester: '3',
       code: 'EG-401',
       subject: 'Communication\nSkills',
-      download: 'assets/docs/Communication Skills.doc'),
+      download: 'Communication-Skills.doc'),
   CourseOutline(
       // semester: '3',
       code: 'IT-401',
       subject: 'Data Structures\n&\nAlgorithms',
-      download: 'assets/docs/Data Structure & Algorithms.doc'),
+      download: 'Data-Structure-&-Algorithms.doc'),
   CourseOutline(
       // semester: '3',
       code: 'IT-402',
       subject: 'Information\nSystems',
-      download: 'assets/docs/Information Systems.doc'),
+      download: 'Information-Systems.doc'),
   CourseOutline(
       // semester: '3',
       code: 'MT-401',
       subject: 'Multivariate\nCalculus',
-      download: 'assets/docs/Multivarible Calculus.doc'),
+      download: 'Multivarible-Calculus.doc'),
   CourseOutline(
       // semester: '3',
       code: 'IT-403',
       subject: 'Modern Programming\nLanguages-I',
-      download: 'assets/docs/Modern Programming Languages-I.doc'),
+      download: 'Modern-Programming-Languages-I.doc'),
   CourseOutline(
       // semester: '3',
       code: 'MG-401',
       subject: 'Principles\nof Management',
-      download: 'assets/docs/Principles of Management.doc'),
+      download: 'Principles-of-Management.doc'),
 ];
 List<CourseOutline> it4 = [
   CourseOutline(
       // semester: '4',
       code: 'IT-412',
       subject: 'Database\nSystems',
-      download: 'assets/docs/Database Systems.doc'),
+      download: 'Database-Systems.doc'),
   CourseOutline(
       // semester: '4',
       code: 'IT-414',
       subject: 'Digital Logic\n&\nComputer Architecture',
-      download: 'assets/docs/Digital Logic & Computer Architecture.doc'),
+      download: 'Digital-Logic-&-Computer-Architecture.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MT-411',
       subject: 'Linear\nAlgebra',
-      download: 'assets/docs/Linear Algebra.doc'),
+      download: 'Linear-Algebra.doc'),
   CourseOutline(
       // semester: '4',
       code: 'IT-413',
       subject: 'Modern Programming\nLanguages-II',
-      download: 'assets/docs/Modern Programming Languages-II.doc'),
+      download: 'Modern-Programming-Languages-II.doc'),
   CourseOutline(
       // semester: '4',
       code: 'IT-411',
       subject: 'Operating\nSystems',
-      download: 'assets/docs/Operating System.doc'),
+      download: 'Operating-System.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MG-411',
       subject: 'Organizational\nBehavior',
-      download: 'assets/docs/Organizattional Behaviour.doc'),
+      download: 'Organizattional-Behaviour.doc'),
 ];
 List<CourseOutline> it5 = [
   CourseOutline(
       // semester: '5',
       code: 'IT-503',
       subject: 'Computer Communication\n&\nNetworks',
-      download: 'assets/docs/Computer Communication and Networks.doc'),
+      download: 'Computer-Communication-and-Networks.doc'),
   CourseOutline(
       // semester: '5',
       code: 'IT-504',
       subject: 'Distributed Database\nSystems',
-      download: 'assets/docs/Distributed Database Systems.doc'),
+      download: 'Distributed-Database-Systems.doc'),
   CourseOutline(
       // semester: '5',
       code: 'MG-501',
       subject: 'Marketing',
-      download: 'assets/docs/Marketing.doc'),
+      download: 'Marketing.doc'),
   CourseOutline(
       // semester: '5',
       code: 'MT-501',
       subject: 'Probability\n&\nStatistics',
-      download: 'assets/docs/Probability & Statistics.doc'),
+      download: 'Probability-&-Statistics.doc'),
   CourseOutline(
       // semester: '5',
       code: 'IT-501',
       subject: 'Introduction to\nSoftware Development',
-      download: 'assets/docs/Intro. to Software Development.doc'),
+      download: 'Intro.-to-Software-Development.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-502',
       subject: 'Visual\nProgramming-I',
-      download: 'assets/docs/Visual_Programming-I.doc'),
+      download: 'Visual-Programming-I.doc'),
 ];
 List<CourseOutline> it6 = [
   CourseOutline(
       // semester: '6',
       code: 'IT-511',
       subject: 'Artificial\nIntelligence',
-      download: 'assets/docs/Artificial Intelligence.doc'),
+      download: 'Artificial-Intelligence.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-512',
       subject: 'Network Management\n&\nSecurity',
-      download: 'assets/docs/Network Management & Security.doc'),
+      download: 'Network-Management-&-Security.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-513',
       subject: 'Software\nEngineering-II',
-      download: 'assets/docs/Software Engineering-II.doc'),
+      download: 'Software-Engineering-II.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-514',
       subject: 'System\nAdministration',
-      download: 'assets/docs/System_Administration IT.doc'),
+      download: 'System-Administration-IT.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-515',
       subject: 'Visual\nProgramming-II',
-      download: 'assets/docs/Visual Programming-II.doc'),
+      download: 'Visual-Programming-II.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-516',
       subject: 'Web\nEngineering',
-      download: 'assets/docs/Web Engineering.doc'),
+      download: 'Web-Engineering.doc'),
 ];
 List<CourseOutline> it7 = [
   CourseOutline(
       // semester: '7',
       code: 'IT-604',
       subject: 'Human Computer\nInteraction',
-      download: 'assets/docs/Human Computer Interaction.doc'),
+      download: 'Human-Computer-Interaction.doc'),
   CourseOutline(
       // semester: '7',
       code: 'IT-603',
       subject: 'Technology\nManagement',
-      download: 'assets/docs/Technology Management.doc'),
+      download: 'Technology-Management.doc'),
   CourseOutline(
       // semester: '7',
       code: 'IT-601',
       subject: 'Telecommunication\nSystems',
-      download: 'assets/docs/Telecommunication.doc'),
+      download: 'Telecommunication.doc'),
   CourseOutline(
       // semester: '7',
       code: 'IT-602',
       subject: 'Wireless\nNetworks',
-      download: 'assets/docs/Wireless Networks.doc'),
+      download: 'Wireless-Networks.doc'),
 ];
 List<CourseOutline> it8 = [
   CourseOutline(
       // semester: '8',
       code: 'IT-612',
       subject: 'Digital Signal\nProcessing',
-      download: 'assets/docs/Digital Signal Processing.doc'),
+      download: 'Digital-Signal-Processing.doc'),
   CourseOutline(
       // semester: '8',
       code: 'SS-611',
       subject: 'Professional\nPractices',
-      download: 'assets/docs/Professional Practices.doc'),
+      download: 'Professional-Practices.doc'),
 ];
 
 List<CourseOutline> bs1 = [
@@ -863,229 +863,229 @@ List<CourseOutline> bs1 = [
       // semester: '1',
       code: 'MT-301',
       subject: 'Calculus\n&\nAnalytical Geometry',
-      download: 'assets/docs/Calculus & analytical Geom.doc'),
+      download: 'Calculus-&-analytical-Geom.doc'),
   CourseOutline(
       // semester: '1',
       code: 'EG-301',
       subject: 'English Composition\n&\nComprehension',
-      download: 'assets/docs/English Com-comprehension.docx'),
+      download: 'English-Com-comprehension.docx'),
   CourseOutline(
       // semester: '1',
       code: 'MG-301',
       subject: 'Financial\nAccounting',
-      download: 'assets/docs/Finalcial Accounting.doc'),
+      download: 'Finalcial-Accounting.doc'),
   CourseOutline(
       // semester: '1',
       code: 'CS-301',
       subject: 'Introduction\nto\nComputing',
-      download: 'assets/docs/Introduction to Computering.doc'),
+      download: 'Introduction-to-Computering.doc'),
   CourseOutline(
       // semester: '1',
       code: 'CS-302',
       subject: 'Programming\nFundamentals',
-      download: 'assets/docs/Programming Fundamentals.doc'),
+      download: 'Programming-Fundamentals.doc'),
   CourseOutline(
       // semester: '1',
       code: 'PK-301',
       subject: 'Pakistan\nStudies',
-      download: 'assets/docs/Pakistan study.doc'),
+      download: 'Pakistan-study.doc'),
 ];
 List<CourseOutline> bs2 = [
   CourseOutline(
       // semester: '2',
       code: 'MT-311',
       subject: 'Differential\nEquations',
-      download: 'assets/docs/Differentail Equations.doc'),
+      download: 'Differentail-Equations.doc'),
   CourseOutline(
       // semester: '2',
       code: 'CS-313',
       subject: 'Digital Logic\n&\nComputer Architecture',
-      download: 'assets/docs/Digital Logic & Computer Architecture.doc'),
+      download: 'Digital-Logic-&-Computer-Architecture.doc'),
   CourseOutline(
       // semester: '2',
       code: 'CS-312',
       subject: 'Discrete\nStructures',
-      download: 'assets/docs/Discrete Structures.doc'),
+      download: 'assets/docs/Discrete-Structures.doc'),
   CourseOutline(
       // semester: '2',
       code: 'SS-311',
       subject: 'Economics',
-      download: 'assets/docs/Economics.doc'),
+      download: 'Economics.doc'),
   CourseOutline(
       // semester: '2',
       code: 'CS-311',
       subject: 'Object Oriented\nParadigm',
-      download: 'assets/docs/Object Oriented Paradigm.doc'),
+      download: 'Object-Oriented-Paradigm.doc'),
   CourseOutline(
       // semester: '2',
       code: 'EG-311',
       subject: 'Technical\n&\nBusiness Writing',
-      download: 'assets/docs/Technical & Business Writing.doc'),
+      download: 'Technical-&-Business-Writing.doc'),
 ];
 List<CourseOutline> bs3 = [
   CourseOutline(
       // semester: '3',
       code: 'EG-401',
       subject: 'Communication\nSkills',
-      download: 'assets/docs/Communication Skills.doc'),
+      download: 'Communication-Skills.doc'),
   CourseOutline(
       // semester: '3',
       code: 'CS-401',
       subject: 'Data Structures\n&\nAlgorithms',
-      download: 'assets/docs/Data Structure & Algorithms.doc'),
+      download: 'Data-Structure-&-Algorithms.doc'),
   CourseOutline(
       // semester: '3',
       code: 'CS-402',
       subject: 'Database\nSystems',
-      download: 'assets/docs/Database Systems.doc'),
+      download: 'Database-Systems.doc'),
   CourseOutline(
       // semester: '3',
       code: 'MT-401',
       subject: 'Multivariate\nCalculus',
-      download: 'assets/docs/Multivarible Calculus.doc'),
+      download: 'Multivarible-Calculus.doc'),
   CourseOutline(
       // semester: '3',
       code: 'CS-403',
       subject: 'Operating\nSystems',
-      download: 'assets/docs/Operating System.doc'),
+      download: 'Operating-System.doc'),
   CourseOutline(
       // semester: '3',
       code: 'PH-401',
       subject: 'Physics\n( Electromagnetism )',
-      download: 'assets/docs/Phy-Electromagnatism.doc'),
+      download: 'Phy-Electromagnatism.doc'),
 ];
 List<CourseOutline> bs4 = [
   CourseOutline(
       // semester: '4',
       code: 'CS-411',
       subject: 'Computer\nArchitecture',
-      download: 'assets/docs/Computer Architecture.doc'),
+      download: 'Computer-Architecture.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MG-411',
       subject: 'Financial\nManagement',
-      download: 'assets/docs/Finacial Management.doc'),
+      download: 'Finacial-Management.doc'),
   CourseOutline(
       // semester: '4',
       code: 'CS-412',
       subject: 'Introduction\nto\nSoftware Development',
-      download: 'assets/docs/Intro. to Software Development.doc'),
+      download: 'Intro.-to-Software-Development.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MT-411',
       subject: 'Linear\nAlgebra',
-      download: 'assets/docs/Linear Algebra.doc'),
+      download: 'assets/docs/Linear-Algebra.doc'),
   CourseOutline(
       // semester: '4',
       code: 'CS-413',
       subject: 'Modern Programming\nLanguages-I',
-      download: 'assets/docs/Modern Programming Languages-I.doc'),
+      download: 'Modern-Programming-Languages-I.doc'),
   CourseOutline(
       // semester: '4',
       code: 'PH-411',
       subject: 'Physics-II',
-      download: 'assets/docs/Physics-II.doc'),
+      download: 'Physics-II.doc'),
 ];
 List<CourseOutline> bs5 = [
   CourseOutline(
       // semester: '5',
       code: 'CS-501',
       subject: 'Computer Organization\n&\nAssembly Language',
-      download: 'assets/docs/Comp. Org. & Assembly.doc'),
+      download: 'Comp.-Org.-&-Assembly.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-504',
       subject: 'Modern Programming\nLanguages-II',
-      download: 'assets/docs/Modern Programming Languages-II.doc'),
+      download: 'Modern-Programming-Languages-II.doc'),
   CourseOutline(
       // semester: '5',
       code: 'MT-501',
       subject: 'Probability\n&\nStatistics',
-      download: 'assets/docs/Probability & Statistics.doc'),
+      download: 'Probability-&-Statistics.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-502',
       subject: 'Software\nEngineering-II',
-      download: 'assets/docs/Software Engineering-II.doc'),
+      download: 'Software-Engineering-II.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-503',
       subject: 'Theory of Automata\n&\nFormal Languages',
-      download: 'assets/docs/Theory of Automata and Formal Languages.doc'),
+      download: 'Theory-of-Automata-and-Formal-Languages.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-505',
       subject: 'Web\nEngineering',
-      download: 'assets/docs/Web Engineering.doc'),
+      download: 'Web-Engineering.doc'),
 ];
 List<CourseOutline> bs6 = [
   CourseOutline(
       // semester: '6',
       code: 'CS-512',
       subject: 'Analysis of\nAlgorithms',
-      download: 'assets/docs/Analysis of algorithms.doc'),
+      download: 'Analysis-of-algorithms.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-514',
       subject: 'Computer\nGraphics',
-      download: 'assets/docs/Computer Graphics.doc'),
+      download: 'Computer-Graphics.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-511',
       subject: 'Computer Communications\n&\nNetworks',
-      download: 'assets/docs/Computer Communication and Networks.doc'),
+      download: 'Computer-Communication-and-Networks.doc'),
   CourseOutline(
       // semester: '6',
       code: 'PS-511',
       subject: 'Psychology',
-      download: 'assets/docs/Psychology.doc'),
+      download: 'Psychology.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-513',
       subject: 'System\nProgramming',
-      download: 'assets/docs/System Programming.DOC'),
+      download: 'System-Programming.DOC'),
   CourseOutline(
       // semester: '6',
       code: 'CS-515',
       subject: 'Visual\nProgramming - I',
-      download: 'assets/docs/Visual_Programming-I.doc'),
+      download: 'Visual-Programming-I.doc'),
 ];
 List<CourseOutline> bs7 = [
   CourseOutline(
       // semester: '7',
       code: 'CS-601',
       subject: 'Artificial\nIntelligence',
-      download: 'assets/docs/Artificial Intelligence.doc'),
+      download: 'Artificial-Intelligence.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-602',
       subject: 'Compiler\nConstruction',
-      download: 'assets/docs/Compiler Consturction.doc'),
+      download: 'Compiler-Consturction.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-605',
       subject: 'Data & Network\nSecurity',
-      download: 'assets/docs/Data and Network Security.doc'),
+      download: 'Data-and-Network-Security.doc'),
   CourseOutline(
       // semester: '7',
       code: 'PS-604',
       subject: 'Distributed Database\nSystems',
-      download: 'assets/docs/Distributed Database Systems.doc'),
+      download: 'Distributed-Database-Systems.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-606',
       subject: 'Numerical\nComputing',
-      download: 'assets/docs/Numerical Computing.doc'),
+      download: 'Numerical-Computing.doc'),
   CourseOutline(
       // semester: '7',
       code: 'CS-603',
       subject: 'Visual\nProgramming - II',
-      download: 'assets/docs/Visual Programming-II.doc'),
+      download: 'Visual-Programming-II.doc'),
 ];
 List<CourseOutline> bs8 = [
   CourseOutline(
       // semester: '8',
       code: 'SS-611',
       subject: 'Professional\nPractices',
-      download: 'assets/docs/Professional Practices.doc')
+      download: 'Professional-Practices.doc')
 ];

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:student_potal_aup/colors.dart';
 
@@ -37,6 +38,18 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
               borderRadius: BorderRadius.circular(20.r),
               child: Padding(
                 padding: EdgeInsets.all(10.r),
+                // child: CachedNetworkImage(
+                //   imageUrl: widget.newsData[index].image,
+                //   progressIndicatorBuilder: (context, url, downloadProgress) =>
+                //       CircularProgressIndicator(
+                //     value: downloadProgress.progress,
+                //     color: golden,
+                //   ),
+                //   errorWidget: (context, url, error) => const Icon(
+                //     Icons.error,
+                //     size: 20,
+                //   ),
+                // ),
                 child: Image.network(
                   widget.newsData[index].image,
                   fit: BoxFit.cover,

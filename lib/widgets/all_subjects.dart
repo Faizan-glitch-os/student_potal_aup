@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:open_file/open_file.dart';
+import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 import 'package:student_potal_aup/colors.dart';
 
@@ -11,6 +15,18 @@ class AllSubjects extends StatelessWidget {
 
   final List subjects;
   final String semester;
+
+  Future<File> _loadFileFromAssets(String fileName) async {
+    final byteData = await rootBundle.load('assets/docs/$fileName');
+
+    final tempDir = await getTemporaryDirectory();
+
+    final tempFile = File('${tempDir.path}/$fileName');
+
+    await tempFile.writeAsBytes(byteData.buffer.asUint8List(), flush: true);
+
+    return tempFile;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +64,7 @@ class AllSubjects extends StatelessWidget {
                       color: golden, fontSize: 14.sp, fontFamily: 'Montserrat'),
                 ),
                 Text(
-                  'Download',
+                  'Open',
                   style: TextStyle(
                       color: golden, fontSize: 14.sp, fontFamily: 'Montserrat'),
                 ),
@@ -81,12 +97,18 @@ class AllSubjects extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {
-                        Uri url = Uri.parse(item.download);
-                        launchUrl(url);
+                      onPressed: () async {
+                        // Uri url = Uri.parse(item.download);
+                        // launchUrl(url);
+                        print('open button pressed');
+
+                        String assetFileName = item.download;
+                        final file = await _loadFileFromAssets(assetFileName);
+
+                        await OpenFile.open(file.path);
                       },
                       icon: Icon(
-                        Icons.download,
+                        Icons.file_open,
                         size: 16.r,
                         color: Colors.greenAccent,
                       ),
