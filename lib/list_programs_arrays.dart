@@ -636,267 +636,226 @@ List<CourseOutline> it1 = [
       // semester: '1',
       code: 'MT-301',
       subject: 'Calculus\n&\nAnalytical Geometry',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/Calculus%20&%20Analytical%20Geom.doc'),
+      download: 'assets/docs/Calculus & analytical Geom.doc'),
   CourseOutline(
       // semester: '1',
       code: 'EG-301',
       subject: 'English Composition\n&\nComprehension',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/English%20Com-comprehension.docx'),
+      download: 'assets/docs/English Com-comprehension.docx'),
   CourseOutline(
       // semester: '1',
       code: 'MG-301',
       subject: 'Financial\nAccounting',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/Finalcial%20Accounting.doc'),
+      download: 'assets/docs/Finalcial Accounting.doc'),
   CourseOutline(
       // semester: '1',
       code: 'IT-301',
       subject: 'Introduction\nto\nComputing',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/Introduction%20to%20Computing.doc'),
+      download: 'assets/docs/Introduction to Computering.doc'),
   CourseOutline(
       // semester: '1',
       code: 'IT-302',
       subject: 'Programming\nFundamentals',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-I/Programming%20Fundamentals.doc'),
+      download: 'assets/docs/Programming Fundamentals.doc'),
   CourseOutline(
       // semester: '1',
       code: 'PK-301',
       subject: 'Pakistan\nStudies',
-      download: 'https://www.aup.edu.pk/bsit.php'),
+      download: 'assets/docs/Pakistan study.doc'),
 ];
 List<CourseOutline> it2 = [
   CourseOutline(
       // semester: '2',
       code: 'MT-311',
       subject: 'Differential\nEquations',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Differentail%20Equations.doc'),
+      download: 'assets/docs/Differentail Equations.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-312',
       subject: 'Discrete\nStructures',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Discrete%20Structures.doc'),
+      download: 'assets/docs/Discrete Structures.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-314',
       subject: 'E-Commerce',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/E-Commerce.doc'),
+      download: 'assets/docs/E-Commerce.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-313',
       subject: 'Introduction\nto IT',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Intro%20to%20IT.doc'),
+      download: 'assets/docs/Intro to IT.doc'),
   CourseOutline(
       // semester: '2',
       code: 'IT-311',
       subject: 'Object Oriented\nParadigm',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Object%20Oriented%20Paradigm.doc'),
+      download: 'assets/docs/Object Oriented Paradigm.doc'),
   CourseOutline(
       // semester: '2',
       code: 'EG-311',
       subject: 'Technical &\nBusiness Writing',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-II/Technical%20&%20Business%20Writing.doc'),
+      download: 'assets/docs/Technical & Business Writing.doc'),
 ];
 List<CourseOutline> it3 = [
   CourseOutline(
       // semester: '3',
       code: 'EG-401',
       subject: 'Communication\nSkills',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Communication%20Skills.doc'),
+      download: 'assets/docs/Communication Skills.doc'),
   CourseOutline(
       // semester: '3',
       code: 'IT-401',
       subject: 'Data Structures\n&\nAlgorithms',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Data%20Structure%20&%20Algorithms.doc'),
+      download: 'assets/docs/Data Structure & Algorithms.doc'),
   CourseOutline(
       // semester: '3',
       code: 'IT-402',
       subject: 'Information\nSystems',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Information%20Systems.doc'),
+      download: 'assets/docs/Information Systems.doc'),
   CourseOutline(
       // semester: '3',
       code: 'MT-401',
       subject: 'Multivariate\nCalculus',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Modern_Programming%20Languages-1.doc'),
+      download: 'assets/docs/Multivarible Calculus.doc'),
   CourseOutline(
       // semester: '3',
       code: 'IT-403',
       subject: 'Modern Programming\nLanguages-I',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Multivarible%20Calculus.doc'),
+      download: 'assets/docs/Modern Programming Languages-I.doc'),
   CourseOutline(
       // semester: '3',
       code: 'MG-401',
       subject: 'Principles\nof Management',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-III/Principles%20of%20Management.doc'),
+      download: 'assets/docs/Principles of Management.doc'),
 ];
 List<CourseOutline> it4 = [
   CourseOutline(
       // semester: '4',
       code: 'IT-412',
       subject: 'Database\nSystems',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Database%20Systems.doc'),
+      download: 'assets/docs/Database Systems.doc'),
   CourseOutline(
       // semester: '4',
       code: 'IT-414',
       subject: 'Digital Logic\n&\nComputer Architecture',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Digital%20Logic%20&%20Computer%20Architecture.doc'),
+      download: 'assets/docs/Digital Logic & Computer Architecture.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MT-411',
       subject: 'Linear\nAlgebra',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Linear%20Algebra.doc'),
+      download: 'assets/docs/Linear Algebra.doc'),
   CourseOutline(
       // semester: '4',
       code: 'IT-413',
       subject: 'Modern Programming\nLanguages-II',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Modern%20programming%20Languages-II.doc'),
+      download: 'assets/docs/Modern Programming Languages-II.doc'),
   CourseOutline(
       // semester: '4',
       code: 'IT-411',
       subject: 'Operating\nSystems',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Operating%20Systems.doc'),
+      download: 'assets/docs/Operating System.doc'),
   CourseOutline(
       // semester: '4',
       code: 'MG-411',
       subject: 'Organizational\nBehavior',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-IV/Organizattional%20Behaviour.doc'),
+      download: 'assets/docs/Organizattional Behaviour.doc'),
 ];
 List<CourseOutline> it5 = [
   CourseOutline(
       // semester: '5',
       code: 'IT-503',
       subject: 'Computer Communication\n&\nNetworks',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Computer_Communication_and_Networks.doc'),
+      download: 'assets/docs/Computer Communication and Networks.doc'),
   CourseOutline(
       // semester: '5',
       code: 'IT-504',
       subject: 'Distributed Database\nSystems',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Distributed%20Database%20Systems.doc'),
+      download: 'assets/docs/Distributed Database Systems.doc'),
   CourseOutline(
       // semester: '5',
       code: 'MG-501',
       subject: 'Marketing',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Marketing.doc'),
+      download: 'assets/docs/Marketing.doc'),
   CourseOutline(
       // semester: '5',
       code: 'MT-501',
       subject: 'Probability\n&\nStatistics',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Probability%20&%20Statistics.doc'),
+      download: 'assets/docs/Probability & Statistics.doc'),
   CourseOutline(
       // semester: '5',
       code: 'IT-501',
       subject: 'Introduction to\nSoftware Development',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Software%20Development.doc'),
+      download: 'assets/docs/Intro. to Software Development.doc'),
   CourseOutline(
       // semester: '5',
       code: 'CS-502',
       subject: 'Visual\nProgramming-I',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-V/Visual_Programing-I.doc'),
+      download: 'assets/docs/Visual_Programming-I.doc'),
 ];
 List<CourseOutline> it6 = [
   CourseOutline(
       // semester: '6',
       code: 'IT-511',
       subject: 'Artificial\nIntelligence',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/Artifical%20Intelligence.doc'),
+      download: 'assets/docs/Artificial Intelligence.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-512',
       subject: 'Network Management\n&\nSecurity',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/Network%20Management%20&%20Security.doc'),
+      download: 'assets/docs/Network Management & Security.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-513',
       subject: 'Software\nEngineering-II',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/Software%20Engineering-II.rtf'),
+      download: 'assets/docs/Software Engineering-II.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-514',
       subject: 'System\nAdministration',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/System_Administration%20IT.doc'),
+      download: 'assets/docs/System_Administration IT.doc'),
   CourseOutline(
       // semester: '6',
       code: 'IT-515',
       subject: 'Visual\nProgramming-II',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/visual%20Programming-II.doc'),
+      download: 'assets/docs/Visual Programming-II.doc'),
   CourseOutline(
       // semester: '6',
       code: 'CS-516',
       subject: 'Web\nEngineering',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VI/Web%20Engineering.doc'),
+      download: 'assets/docs/Web Engineering.doc'),
 ];
 List<CourseOutline> it7 = [
   CourseOutline(
       // semester: '7',
       code: 'IT-604',
       subject: 'Human Computer\nInteraction',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VII/Human%20Computer%20Interaction.doc'),
+      download: 'assets/docs/Human Computer Interaction.doc'),
   CourseOutline(
       // semester: '7',
       code: 'IT-603',
       subject: 'Technology\nManagement',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VII/Technology%20Management.doc'),
+      download: 'assets/docs/Technology Management.doc'),
   CourseOutline(
       // semester: '7',
       code: 'IT-601',
       subject: 'Telecommunication\nSystems',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VII/Telecommunication.doc'),
+      download: 'assets/docs/Telecommunication.doc'),
   CourseOutline(
       // semester: '7',
       code: 'IT-602',
       subject: 'Wireless\nNetworks',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VII/Wireless%20Networks.doc'),
+      download: 'assets/docs/Wireless Networks.doc'),
 ];
 List<CourseOutline> it8 = [
   CourseOutline(
       // semester: '8',
       code: 'IT-612',
       subject: 'Digital Signal\nProcessing',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VIII/Digital%20Signal%20Processing.doc'),
+      download: 'assets/docs/Digital Signal Processing.doc'),
   CourseOutline(
       // semester: '8',
       code: 'SS-611',
       subject: 'Professional\nPractices',
-      download:
-          'https://www.aup.edu.pk/downloads/Schemes-of-Studies/BSIT/BSIT-VIII/Professional%20Practices.doc'),
+      download: 'assets/docs/Professional Practices.doc'),
 ];
 
 List<CourseOutline> bs1 = [
