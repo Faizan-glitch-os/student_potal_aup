@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dio/dio.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 import 'package:student_potal_aup/colors.dart';
+import 'package:student_potal_aup/widgets/download_notification_widget.dart';
 
 class ShowNewsWidget extends StatefulWidget {
   const ShowNewsWidget({
@@ -22,6 +27,7 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
   Widget build(BuildContext context) {
     void showImage(int index) {
       showModalBottomSheet(
+        useSafeArea: true,
         enableDrag: false,
         barrierColor: Colors.black12.withOpacity(.6),
         isScrollControlled: true,
@@ -30,32 +36,40 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
             borderRadius: BorderRadius.all(Radius.circular(10.r)),
             side: BorderSide(color: golden, width: 1.5.r)),
         context: context,
-        builder: (ctx) => IntrinsicHeight(
-          child: InteractiveViewer(
-            minScale: 1,
-            maxScale: 2,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20.r),
-              child: Padding(
-                padding: EdgeInsets.all(10.r),
-                // child: CachedNetworkImage(
-                //   imageUrl: widget.newsData[index].image,
-                //   progressIndicatorBuilder: (context, url, downloadProgress) =>
-                //       CircularProgressIndicator(
-                //     value: downloadProgress.progress,
-                //     color: golden,
-                //   ),
-                //   errorWidget: (context, url, error) => const Icon(
-                //     Icons.error,
-                //     size: 20,
-                //   ),
-                // ),
-                child: Image.network(
-                  widget.newsData[index].image,
-                  fit: BoxFit.cover,
+        builder: (ctx) => SingleChildScrollView(
+          child: Column(
+            children: [
+              const DownloadNotificationWidget(),
+              SizedBox(height: 20.h),
+              IntrinsicHeight(
+                child: InteractiveViewer(
+                  minScale: 1,
+                  maxScale: 2,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.r),
+                    child: Padding(
+                      padding: EdgeInsets.all(10.r),
+                      // child: CachedNetworkImage(
+                      //   imageUrl: widget.newsData[index].image,
+                      //   progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      //       CircularProgressIndicator(
+                      //     value: downloadProgress.progress,
+                      //     color: golden,
+                      //   ),
+                      //   errorWidget: (context, url, error) => const Icon(
+                      //     Icons.error,
+                      //     size: 20,
+                      //   ),
+                      // ),
+                      child: Image.network(
+                        widget.newsData[index].image,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ),
       );
