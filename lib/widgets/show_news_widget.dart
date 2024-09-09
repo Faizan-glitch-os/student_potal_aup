@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dio/dio.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:path_provider/path_provider.dart';
-import 'dart:io';
-
 import 'package:student_potal_aup/colors.dart';
 import 'package:student_potal_aup/widgets/download_notification_widget.dart';
 
@@ -39,7 +33,9 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
         builder: (ctx) => SingleChildScrollView(
           child: Column(
             children: [
-              const DownloadNotificationWidget(),
+              DownloadNotificationWidget(
+                imageURL: widget.newsData[index].image,
+              ),
               SizedBox(height: 20.h),
               IntrinsicHeight(
                 child: InteractiveViewer(
