@@ -56,14 +56,16 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
       isScrollControlled: true,
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10.r)),
-          side: BorderSide(color: golden, width: 1.5.r)),
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.r),
+        ),
+      ),
       context: context,
       builder: (ctx) => InteractiveViewer(
         minScale: 1,
         maxScale: 2,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(20.r),
+          borderRadius: BorderRadius.circular(10.r),
           child: Image.file(
             File(downloadedImages[index].path),
             fit: BoxFit.contain,
@@ -101,9 +103,12 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                     onTap: () {
                       showImage(index);
                     },
-                    child: Image.file(
-                      File(downloadedImages[index].path),
-                      fit: BoxFit.cover,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10.r),
+                      child: Image.file(
+                        File(downloadedImages[index].path),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   );
                 },

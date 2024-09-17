@@ -27,8 +27,8 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
         isScrollControlled: true,
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            side: BorderSide(color: golden, width: 1.5.r)),
+          borderRadius: BorderRadius.all(Radius.circular(10.r)),
+        ),
         context: context,
         builder: (ctx) => SingleChildScrollView(
           child: Column(
@@ -41,27 +41,9 @@ class _ShowNewsWidgetState extends State<ShowNewsWidget> {
                 child: InteractiveViewer(
                   minScale: 1,
                   maxScale: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20.r),
-                    child: Padding(
-                      padding: EdgeInsets.all(10.r),
-                      // child: CachedNetworkImage(
-                      //   imageUrl: widget.newsData[index].image,
-                      //   progressIndicatorBuilder: (context, url, downloadProgress) =>
-                      //       CircularProgressIndicator(
-                      //     value: downloadProgress.progress,
-                      //     color: golden,
-                      //   ),
-                      //   errorWidget: (context, url, error) => const Icon(
-                      //     Icons.error,
-                      //     size: 20,
-                      //   ),
-                      // ),
-                      child: Image.network(
-                        widget.newsData[index].image,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                  child: Image.network(
+                    widget.newsData[index].image,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
