@@ -59,19 +59,14 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           borderRadius: BorderRadius.all(Radius.circular(10.r)),
           side: BorderSide(color: golden, width: 1.5.r)),
       context: context,
-      builder: (ctx) => IntrinsicHeight(
-        child: InteractiveViewer(
-          minScale: 1,
-          maxScale: 2,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20.r),
-            child: Padding(
-              padding: EdgeInsets.all(10.r),
-              child: Image.file(
-                File(downloadedImages[index].path),
-                fit: BoxFit.cover,
-              ),
-            ),
+      builder: (ctx) => InteractiveViewer(
+        minScale: 1,
+        maxScale: 2,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20.r),
+          child: Image.file(
+            File(downloadedImages[index].path),
+            fit: BoxFit.contain,
           ),
         ),
       ),
@@ -103,7 +98,9 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                 itemCount: downloadedImages.length,
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      showImage(index);
+                    },
                     child: Image.file(
                       File(downloadedImages[index].path),
                       fit: BoxFit.cover,
