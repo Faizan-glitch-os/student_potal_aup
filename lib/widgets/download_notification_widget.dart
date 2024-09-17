@@ -31,9 +31,7 @@ class _DownloadNotificationWidgetState
   );
 
   Future<bool> _requestPermission(Permission permission) async {
-    print('in the request function');
     if (await permission.isGranted) {
-      print('in the true');
       return true;
     } else {
       var result = await permission.request();

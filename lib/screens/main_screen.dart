@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:student_potal_aup/screens/admin_screen.dart';
+import 'package:student_potal_aup/screens/downloads_screen.dart';
 import 'package:student_potal_aup/screens/results_screen.dart';
 
 import 'package:student_potal_aup/screens/scholarship_screen.dart';
@@ -36,11 +40,53 @@ class MainScreen extends StatelessWidget {
       );
     }
 
+    Future<void> requestPermission() async {
+      var status = await Permission.storage.request();
+      if (status.isGranted) {
+        navigateToScreen(const DownloadsScreen());
+      } else {
+        AlertDialog(
+          title: Text(
+            'Storage Permissions',
+            style: TextStyle(
+                fontSize: 25.sp, color: darkGrey, fontFamily: 'Montserrat'),
+          ),
+          content: Text(
+            'No Storage Permission Granted',
+            style: TextStyle(
+                fontSize: 20.sp, color: Colors.red, fontFamily: 'Montserrat'),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                'Okay',
+                style: TextStyle(
+                    fontSize: 15.sp, color: darkGrey, fontFamily: 'Montserrat'),
+              ),
+            ),
+          ],
+        );
+      }
+    }
+
     return Scaffold(
       backgroundColor: halfWhite,
+      extendBody: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: requestPermission,
+          icon: Icon(
+            Icons.download,
+            size: 30.r,
+          ),
+        ),
+      ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
               highlightColor: golden.withOpacity(.2),
