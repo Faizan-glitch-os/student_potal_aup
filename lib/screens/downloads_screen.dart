@@ -96,7 +96,8 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio: .5,
-                    crossAxisSpacing: 5),
+                    crossAxisSpacing: 5,
+                    mainAxisSpacing: 10),
                 itemCount: downloadedImages.length,
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -107,7 +108,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                       borderRadius: BorderRadius.circular(10.r),
                       child: Image.file(
                         File(downloadedImages[index].path),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   );
