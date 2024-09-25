@@ -44,13 +44,16 @@ class _AdminScreenState extends State<AdminScreen> {
     );
   }
 
+  bool login = false;
+
   @override
   Widget build(BuildContext context) {
     TextEditingController adminNameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
-    void succes() {
+    void success() {
       setState(() {
+        login = !login;
         content = Column(
           children: [
             Text(
@@ -99,7 +102,7 @@ class _AdminScreenState extends State<AdminScreen> {
               'Access Denied, Wrong Credentials',
               style: TextStyle(
                 color: Colors.red,
-                fontSize: 25.sp,
+                fontSize: 20.sp,
                 fontFamily: 'Montserrat',
               ),
             ),
@@ -128,40 +131,74 @@ class _AdminScreenState extends State<AdminScreen> {
                     label: 'Password',
                     keyboardType: TextInputType.text),
                 SizedBox(height: 20.h),
-                ElevatedButton(
-                  style: ButtonStyle(
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.r),
+                login
+                    ? ElevatedButton(
+                        style: ButtonStyle(
+                            shape: WidgetStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.r),
+                              ),
+                            ),
+                            backgroundColor: WidgetStateProperty.all(
+                              darkPurple,
+                            ),
+                            foregroundColor:
+                                WidgetStateProperty.all(halfWhite)),
+                        onPressed: () {
+                          print(adminNameController.text);
+                          print(passwordController.text);
+                          setState(() {
+                            login = !login;
+                          });
+                          Navigator.pop(context);
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20.w, vertical: 10.h),
+                          child: Text(
+                            'LogOut',
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              fontFamily: 'Montserrat',
+                            ),
+                          ),
+                        ),
+                      )
+                    : ElevatedButton(
+                        style: ButtonStyle(
+                            shape: WidgetStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.r),
+                              ),
+                            ),
+                            backgroundColor: WidgetStateProperty.all(
+                              darkPurple,
+                            ),
+                            foregroundColor:
+                                WidgetStateProperty.all(halfWhite)),
+                        onPressed: () {
+                          print(adminNameController.text);
+                          print(passwordController.text);
+                          if (adminNameController.text == 'admin1' &&
+                              passwordController.text == 'admin2') {
+                            success();
+                            FocusScope.of(context).unfocus();
+                          } else {
+                            fail();
+                          }
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20.w, vertical: 10.h),
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              fontFamily: 'Montserrat',
+                            ),
+                          ),
                         ),
                       ),
-                      backgroundColor: WidgetStateProperty.all(
-                        darkPurple,
-                      ),
-                      foregroundColor: WidgetStateProperty.all(halfWhite)),
-                  onPressed: () {
-                    print(adminNameController.text);
-                    print(passwordController.text);
-                    if (adminNameController.text == 'admin1' &&
-                        passwordController.text == 'admin2') {
-                      succes();
-                      FocusScope.of(context).unfocus();
-                    } else {
-                      fail();
-                    }
-                  },
-                  child: Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(
-                        fontSize: 15.sp,
-                        fontFamily: 'Montserrat',
-                      ),
-                    ),
-                  ),
-                ),
 
                 SizedBox(height: 60.h),
                 content
