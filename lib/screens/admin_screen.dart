@@ -145,8 +145,6 @@ class _AdminScreenState extends State<AdminScreen> {
                             foregroundColor:
                                 WidgetStateProperty.all(halfWhite)),
                         onPressed: () {
-                          print(adminNameController.text);
-                          print(passwordController.text);
                           setState(() {
                             login = !login;
                           });
